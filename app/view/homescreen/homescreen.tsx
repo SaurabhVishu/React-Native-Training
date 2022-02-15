@@ -29,7 +29,7 @@ const HomeScreen = (props: InputProp)=> {
             renderItem={({item, index}) => {
                 console.log(item.Country)
                 return(
-                    <View style={{backgroundColor:"skyblue",borderRadius:10,margin:8,alignItems:"center",justifyContent:"center",padding:5}}>
+                    <View >
                        
                         <Text style={{fontSize:25,fontWeight:"500",color:'white',paddingVertical:10}}>{item.Country}</Text>
                     </View>

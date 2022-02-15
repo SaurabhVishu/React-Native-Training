@@ -31,6 +31,23 @@ const screens = {
     notification: "Notification",
     my_wallet: "My Wallet",
 }
+const Form = {
+    Email: "Email",
+    EmailPlaceholder: "Enter the EmailId",
+    Password: "Password",
+    PasswordPlaceholder: "Enter the Password",
+    SaveMe: "Save me"
+}
+
+const Button = {
+    Sign: "Sign in",
+    Signup: "Sign up",
+    ForgetPassword: "Forget Password?",
+    FbBtn:"Continue With Facebook",
+    GglBtn:"Continue With Google",
+
+
+}
 
 const bottom_tabs = [
     {
@@ -167,4 +184,6 @@ export default {
     tags,
     track_order_status,
     GOOGLE_MAP_API_KEY,
+    Form,
+    Button,
 }

@@ -217,6 +217,15 @@ const fromLocs = [
     }
 ]
 
+
+const ScreenData={
+    signScreen:{
+        title:"Let's Sign You In",
+        Subtitle:"Welcome back, you've been missed",
+        Donthaveanaccount: "Dont have an account ?",
+    }
+}
+
 export default {
     vegBiryani,
     
@@ -228,4 +237,5 @@ export default {
     myCards,
     allCards,
     fromLocs,
+    ScreenData,
 }
