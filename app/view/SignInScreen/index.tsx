@@ -22,6 +22,7 @@ const SignInScreen = (props: InputProp) => {
 
         <View style={styles.container}>
             <View>
+            <View>
                 <View style={styles.logo}>
                     <HeaderLogo />
                 </View>
@@ -75,11 +76,12 @@ const SignInScreen = (props: InputProp) => {
 
                 <View style={styles.Signuptext}>
                     <Text style={styles.donthaveAc} >{dummyData.ScreenData.signScreen.Donthaveanaccount}</Text>
-                    <TouchableOpacity>
+                    <TouchableOpacity  onPress={() => navigation.navigate('SignUp')}>
                         <Text style={styles.SignUpBtn}>{constants.Button.Signup}
                         </Text>
                     </TouchableOpacity>
                 </View>
+            </View>
             </View>
 
             <View >
@@ -97,6 +99,7 @@ const SignInScreen = (props: InputProp) => {
                 </TouchableOpacity>
 
             </View>
+            
         </View>
 
 

@@ -33,6 +33,9 @@ const screens = {
 }
 const Form = {
     Email: "Email",
+    Username:"Username",
+    Uplaceholder:"Enter the Username",
+
     EmailPlaceholder: "Enter the EmailId",
     Password: "Password",
     PasswordPlaceholder: "Enter the Password",

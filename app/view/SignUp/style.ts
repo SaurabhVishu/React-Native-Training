@@ -1,60 +1,32 @@
 import { StyleSheet } from "react-native";
 import { COLORS } from "../../config/constants";
-import { SIZES } from "../../config/constants";
-
 const styles = StyleSheet.create({
     container: {
         flex: 1,
+        backgroundColor: "white",
         padding: 15,
-        justifyContent: "space-between",
-        //    justifyContent:"center",
-        //    alignItems:"center",
-        backgroundColor: "white"
-    },
-    inputContainer: {
-        marginVertical: 10,
-    },
-    emailtxt: {
-        margin: 5,
-    },
-    Paswd: {
-        margin: 5,
-    },
-    eyeIcon: {
-        height: 25,
-        width: 25,
-    },
-    TogleBtnCont: {
-        flexDirection: "row",
-        justifyContent: "space-between",
-        marginVertical: 10
-    },
-    switchBtn: {
-        flexDirection: "row",
-    },
-    fgtBtn: {
-        alignItems: "center"
-    },
+           justifyContent: "space-between",
 
+    },
     logo: {
-        //   flex:1,
         justifyContent: "center",
         alignItems: "center"
-
     },
     Heading: {
         textAlign: "center",
         fontSize: 25,
         color: COLORS.black,
         fontWeight: "bold",
-        marginTop: 20,
-
+        // marginTop: 20,
     },
     subhead: {
         textAlign: "center",
         marginTop: 10,
         fontSize: 20,
         color: COLORS.darkGray
+    },
+    emailtxt: {
+        margin: 5,
     },
     textinputcont: {
         backgroundColor:COLORS.lightGray2,
@@ -69,8 +41,19 @@ const styles = StyleSheet.create({
         marginTop: 10,
         borderRadius: 10,
     },
-    Button: {
-        // flexDirection: "row",
+    inputContainer:{
+        marginVertical:5,
+
+    },
+    Paswd:{
+        margin: 5,
+
+    },
+    eyeIcon:{
+        height: 25,
+        width: 25,
+    },
+    Button:{
         fontSize: 20,
         backgroundColor: COLORS.primary,
         padding: 2,
@@ -78,33 +61,28 @@ const styles = StyleSheet.create({
         paddingVertical: 15,
         alignItems: "center",
     },
-    signinTxt: {
+    signinTxt:{
         color: "white",
         fontSize: 18,
         fontWeight: "bold"
     },
-    Signuptext: {
+    Signuptext:{
         flexDirection: "row",
         justifyContent: "center",
-        // alignItems:"center",
+        marginVertical:5,
     },
-    donthaveAc: {
+    donthaveAc:{
         textAlign: "center",
         fontSize: 20,
         color: "black"
     },
-    txt1: {
-        fontSize: 10,
-        color: "black"
-    },
-    SignUpBtn: {
+    SignUpBtn:{
         textAlign: "center",
         fontSize: 18,
-        color: "orange"
+        color:COLORS.orange,
+        marginLeft:5
     },
-
-
-    FbButton: {
+    FbButton:{
         flexDirection: "row",
         justifyContent: "center",
         fontSize: 30,
@@ -113,10 +91,21 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         alignItems: "center",
         marginVertical: 5,
-
+    },
+    fbIcon:{
+        height: 25,
+        width: 25,
+        marginLeft: 5
+    },
+    fbBtnTxt:{
+        textAlign: "center",
+        color: "white",
+        fontSize: 15,
+        marginLeft: 10,
+        fontWeight: "bold"
     },
 
-    GglBtn: {
+    GglBtn:{
         flexDirection: "row",
         justifyContent: "center",
         fontSize: 30,
@@ -126,30 +115,22 @@ const styles = StyleSheet.create({
         alignItems: "center",
         marginVertical: 5
     },
-    fbIcon: {
+    GglIcon:{
         height: 25,
         width: 25,
         marginLeft: 5
     },
-    fbBtnTxt: {
-        textAlign: "center",
-        color: "white",
-        fontSize: 15,
-        marginLeft: 10,
-        fontWeight: "bold"
-    },
-    GglIcon: {
-        height: 25,
-        width: 25,
-        marginLeft: 5
-    },
-    GglBtnTxt: {
+    GglBtnTxt:{
         textAlign: "center",
         color: "black",
         fontSize: 15,
         marginLeft: 10,
         fontWeight: "bold"
     },
+    SignInCon:{
+        marginVertical:15,
+    },
+
 
 })
 export default styles;

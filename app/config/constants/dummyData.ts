@@ -218,17 +218,24 @@ const fromLocs = [
 ]
 
 
-const ScreenData={
-    signScreen:{
-        title:"Let's Sign You In",
-        Subtitle:"Welcome back, you've been missed",
+const ScreenData = {
+    signScreen: {
+        title: "Let's Sign You In",
+        Subtitle: "Welcome back, you've been missed",
         Donthaveanaccount: "Dont have an account ?",
+
+    },
+    signUp: {
+        title: "Getting Started",
+        subtitle: "create an account to continue!",
+        AlreadyHaveAc:"Already have an account?",
+        SignIn:"Sign in",
     }
 }
 
 export default {
     vegBiryani,
-    
+
     myProfile,
     categories,
     menu,

@@ -1,7 +1,7 @@
 import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
 import { NavigationContainer } from "@react-navigation/native";
-import { HomeModel, ProfileModel, SignInModel,OnBoardingModel } from "../viewModel";
+import { HomeModel, ProfileModel, SignInModel,OnBoardingModel, SignUpModel } from "../viewModel";
 
 type RootStackList = {
     Home: undefined,
@@ -16,6 +16,9 @@ const StackNavigator = () => {
             <Stack.Navigator initialRouteName="SignIn">
                 <Stack.Screen name="OnBoarding" component={OnBoardingModel} options={{headerShown:false}}/> 
                 <Stack.Screen name="SignIn" component={SignInModel} options={{headerShown:false}} />
+                <Stack.Screen name="SignUp" component={SignUpModel} options={{headerShown:false}} />
+
+
 
                 <Stack.Screen name="Home" component={HomeModel} />
                 <Stack.Screen name="Profile" component={ProfileModel} />
