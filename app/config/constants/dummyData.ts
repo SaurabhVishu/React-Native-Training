@@ -230,6 +230,12 @@ const ScreenData = {
         subtitle: "create an account to continue!",
         AlreadyHaveAc:"Already have an account?",
         SignIn:"Sign in",
+    },
+    otpScreen:{
+        title:"OTP Authentication",
+        subtitle:"An authentic code has been sent to byprogrammers@gmail.com",
+        didntRCVcode:"Didn't receive code? ",
+        SignMsg:"By signing up you agree to our",
     }
 }
 
