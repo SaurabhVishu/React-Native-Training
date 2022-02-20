@@ -50,7 +50,8 @@ const Button = {
     GglBtn:"Continue With Google",
     Resend:"Resend (69s)",
     continue:"Continue",
-    Terms:"Terms and Conditions"
+    Terms:"Terms and Conditions",
+    SendEmail:"Send Email"
 
 
 }

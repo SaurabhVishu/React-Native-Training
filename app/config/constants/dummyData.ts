@@ -1,3 +1,5 @@
+import PassRcvScreen from "../../view/PasswordRecovery"
+
 const myProfile = {
     name: "ByProgrammers",
     profile_image: require("../../assets/images/profile.png"),
@@ -236,6 +238,12 @@ const ScreenData = {
         subtitle:"An authentic code has been sent to byprogrammers@gmail.com",
         didntRCVcode:"Didn't receive code? ",
         SignMsg:"By signing up you agree to our",
+    },
+    PswdRcvScreen:{
+        title:"Password Recovery",
+        subtitle:"Please enter your email address to recover your password",
+
+
     }
 }
 

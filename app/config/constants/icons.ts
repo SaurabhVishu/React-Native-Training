@@ -49,6 +49,8 @@ const call = require("../../assets/icons/call.png")
 const location_pin = require("../../assets/icons/location_pin.png")
 const navigator = require("../../assets/icons/navigator.png")
 const navigator1 = require("../../assets/icons/navigator1.png")
+const check= require("../../assets/icons/check.png")
+
 
 export default {
     apple,
@@ -57,6 +59,7 @@ export default {
     cross,
     cancel,
     cart,
+    check,
     check_off,
     check_on,
     check_circle,
