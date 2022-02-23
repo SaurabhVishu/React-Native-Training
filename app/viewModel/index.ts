@@ -6,5 +6,6 @@ import SignUpModel from "./SignUpModel";
 import OtpModel from "./otpModel";
 import PassRcvModel from "./PswdRcvModel";
 import FoodDetailModel from './FoodDetailModel';
+import NotificationModel from "./NotificationModel";
 
-export {ProfileModel,HomeModel,SignInModel,OnBoardingModel,SignUpModel,OtpModel,PassRcvModel,FoodDetailModel};
+export {ProfileModel,HomeModel,SignInModel,OnBoardingModel,SignUpModel,OtpModel,PassRcvModel,FoodDetailModel,NotificationModel};

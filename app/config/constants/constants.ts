@@ -31,6 +31,7 @@ const screens = {
     notification: "Notification",
     my_wallet: "My Wallet",
     deatil:"DETAIL",
+    notifi:"NOTIFICATION",
 
 
     

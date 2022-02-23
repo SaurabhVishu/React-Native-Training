@@ -261,6 +261,13 @@ const ScreenData = {
 
     },
 
+    NotificationScreen:{
+            notifi:"Notification",
+            proNotifi:"Promotional notification",
+            youwill:"You will recieve daily updates",
+
+    }
+
 
 }
 
