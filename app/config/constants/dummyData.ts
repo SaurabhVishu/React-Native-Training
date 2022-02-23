@@ -1,4 +1,6 @@
 import PassRcvScreen from "../../view/PasswordRecovery"
+import FoodDeatail from '../../view/FoodDetail/index';
+import icons from "./icons";
 
 const myProfile = {
     name: "ByProgrammers",
@@ -244,12 +246,69 @@ const ScreenData = {
         subtitle:"Please enter your email address to recover your password",
 
 
-    }
+    },
+    FoodDetail:{
+          t1:"78 calories",
+          title:"Hamburger",
+          description: "A popular spice and vegetables mixed favoured rice dish which is typically prepared by layering the biryani gravy and basmati rice in flat bottom vessel.",
+          t2:"4.5" ,
+          t3:"30 Mins",
+          t4:"Free shipping",
+          Sizes:"Sizes:",
+          ByProg:"ByProgrammers",
+          dis:"12 KM away from you",
+          price:"$15.99",
+
+    },
+
+
 }
+
+const SizeData=[
+    {
+        id:0,
+        name:"12"
+    },
+    {
+        id:1,
+        name:"14"
+    },
+    {
+        id:2,
+        name:"16"
+    },
+    {
+        id:3,
+        name:"18"
+    }
+]
+
+const StarData=[
+    {
+        id:0,
+        icon:icons.star,
+    },
+    {
+        id:1,
+        icon:icons.star,
+    },
+    {
+        id:2,
+        icon:icons.star,
+    },
+    {
+        id:3,
+        icon:icons.star,
+    },
+    {
+        id:4,
+        icon:icons.star,
+    },
+]
 
 export default {
     vegBiryani,
-
+    hamburger,
     myProfile,
     categories,
     menu,
@@ -259,4 +318,6 @@ export default {
     allCards,
     fromLocs,
     ScreenData,
+    SizeData,
+    StarData,
 }

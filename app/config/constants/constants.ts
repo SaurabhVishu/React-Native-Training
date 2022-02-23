@@ -30,6 +30,10 @@ const screens = {
     favourite: "Favourite",
     notification: "Notification",
     my_wallet: "My Wallet",
+    deatil:"DETAIL",
+
+
+    
 }
 const Form = {
     Email: "Email",
@@ -51,7 +55,9 @@ const Button = {
     Resend:"Resend (69s)",
     continue:"Continue",
     Terms:"Terms and Conditions",
-    SendEmail:"Send Email"
+    SendEmail:"Send Email",
+    buynow:"Buy Now",
+
 
 
 }

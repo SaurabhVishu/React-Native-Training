@@ -1,7 +1,7 @@
 import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
 import { NavigationContainer } from "@react-navigation/native";
-import { HomeModel, ProfileModel, SignInModel,OnBoardingModel, SignUpModel, OtpModel, PassRcvModel } from "../viewModel";
+import { HomeModel, ProfileModel, SignInModel,OnBoardingModel, SignUpModel, OtpModel, PassRcvModel, FoodDetailModel } from "../viewModel";
 
 
 type RootStackList = {
@@ -14,12 +14,14 @@ const Stack = createStackNavigator()
 const StackNavigator = () => {
     return (
         <NavigationContainer>
-            <Stack.Navigator initialRouteName="PassRecovery">
+            <Stack.Navigator initialRouteName="FoodDetail">
                 <Stack.Screen name="OnBoarding" component={OnBoardingModel} options={{headerShown:false}}/> 
                 <Stack.Screen name="SignIn" component={SignInModel} options={{headerShown:false}} />
                 <Stack.Screen name="SignUp" component={SignUpModel} options={{headerShown:false}} />
                 <Stack.Screen name="Otp" component={OtpModel} options={{headerShown:false}} />
                 <Stack.Screen name="PassRecovery" component={PassRcvModel} options={{headerShown:false}} />
+                <Stack.Screen name="FoodDetail" component={FoodDetailModel} options={{headerShown:false}} />
+
 
 
 
