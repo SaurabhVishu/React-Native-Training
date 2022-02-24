@@ -64,7 +64,7 @@ const FoodDetail = (props: InputProp) => {
                     </TouchableOpacity>
                 </View>
                 <View style={styles.bugerContainer}>
-                    <Image source={require("../../assets/dummyData/hamburger.png")}
+                    <Image source={dummyData.hamburger.image}
                         style={styles.hamburger}
                     />
                 </View>

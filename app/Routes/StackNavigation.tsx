@@ -11,6 +11,7 @@ import {
   PassRcvModel,
   FoodDetailModel,
   NotificationModel,
+  Navigation2Model,
 } from '../viewModel';
 
 type RootStackList = {
@@ -23,7 +24,7 @@ const Stack = createStackNavigator();
 const StackNavigator = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Notification">
+      <Stack.Navigator initialRouteName="Notification2">
         <Stack.Screen
           name="OnBoarding"
           component={OnBoardingModel}
@@ -57,6 +58,11 @@ const StackNavigator = () => {
         <Stack.Screen
           name="Notification"
           component={NotificationModel}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="Notification2"
+          component={Navigation2Model}
           options={{headerShown: false}}
         />
 

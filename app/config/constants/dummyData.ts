@@ -312,6 +312,47 @@ const StarData=[
         icon:icons.star,
     },
 ]
+const DATA = [
+    {
+        title: "Today",
+        data: [
+            {
+                title: "Domino's- Buy 1 get 1 free",
+                time: "few secoon ago",
+                subtitle:"Buy 1 get 1 free for small sizes until nov  30,2021",
+                image:icons.domino
+
+            },
+            {
+                title: "Veg Biryani - 35% sale today",
+                time: "5 mins ago",
+                subtitle:"Buy 1 get 1 free for small sizes until nov  30,2021",
+                image:icons.veg_biryani
+            },
+            ]
+    },
+    {
+        title: "Yesterday",
+        data: [
+            {
+                title: "Domino's- Buy 1 get 1 free",
+                time: "1 day ago",
+                subtitle:"Buy 1 get 1 free for small sizes until nov  30,2021",
+                image:icons.domino
+
+            },
+            {
+                title: "Veg Biryani - 35% sale today",
+                time: "5 mins ago",
+                subtitle:"Buy 1 get 1 free for small sizes until nov  30,2021",
+                image:icons.veg_biryani
+            },
+           
+            ]
+    },
+];
+
+
 
 export default {
     vegBiryani,
@@ -327,4 +368,5 @@ export default {
     ScreenData,
     SizeData,
     StarData,
+    DATA,
 }

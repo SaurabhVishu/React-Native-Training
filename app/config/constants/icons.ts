@@ -50,6 +50,8 @@ const location_pin = require("../../assets/icons/location_pin.png")
 const navigator = require("../../assets/icons/navigator.png")
 const navigator1 = require("../../assets/icons/navigator1.png")
 const check= require("../../assets/icons/check.png")
+const veg_biryani= require("../../assets/icons/veg_biryani.png")
+const domino= require("../../assets/icons/domino.png")
 
 
 export default {
@@ -104,5 +106,7 @@ export default {
     call,
     location_pin,
     navigator,
-    navigator1
+    navigator1,
+    veg_biryani,
+    domino
 }
