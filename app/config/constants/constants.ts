@@ -32,7 +32,8 @@ const screens = {
     my_wallet: "My Wallet",
     deatil:"DETAIL",
     notifi:"NOTIFICATION",
-
+    MY_CARD:"MY CARD",
+    AddCard:"Add new card",
 
     
 }
@@ -58,6 +59,7 @@ const Button = {
     Terms:"Terms and Conditions",
     SendEmail:"Send Email",
     buynow:"Buy Now",
+    Add:"Add",
 
 
 

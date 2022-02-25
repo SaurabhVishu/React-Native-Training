@@ -12,6 +12,7 @@ import {
   FoodDetailModel,
   NotificationModel,
   Navigation2Model,
+  MycardModel,
 } from '../viewModel';
 
 type RootStackList = {
@@ -24,7 +25,7 @@ const Stack = createStackNavigator();
 const StackNavigator = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Notification2">
+      <Stack.Navigator initialRouteName="MyCards">
         <Stack.Screen
           name="OnBoarding"
           component={OnBoardingModel}
@@ -63,6 +64,11 @@ const StackNavigator = () => {
         <Stack.Screen
           name="Notification2"
           component={Navigation2Model}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="MyCards"
+          component={MycardModel}
           options={{headerShown: false}}
         />
 
