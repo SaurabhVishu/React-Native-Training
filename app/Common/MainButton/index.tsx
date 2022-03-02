@@ -6,7 +6,7 @@ import styles from "./style"
 
 const MainButton=( props:any)=>{
     return(
-        <TouchableOpacity
+        <TouchableOpacity 
                     style={styles.Button}>
                     <Text style={styles.signinTxt}>{props.name}</Text>
                 </TouchableOpacity>

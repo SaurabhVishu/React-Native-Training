@@ -266,6 +266,19 @@ const ScreenData = {
             proNotifi:"Promotional notification",
             youwill:"You will recieve daily updates",
 
+    },
+    CheckoutScreen:{
+        DelAdds:"Delivery Address",
+        LocDetail:"300 post Street San Francisco,",
+        CA:"CA",
+        addCoupan:"Add Coupon",
+        CouponCode:"Coupon Code",
+        subTotal:"Subtotal",
+        ShipingFee:"Shipping fee",
+        Price1:"$37.97",
+        Price2:"$0.00",
+        Total:"Total:",
+        totPrice:"$37.97"
     }
 
 

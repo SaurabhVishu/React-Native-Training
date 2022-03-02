@@ -1,6 +1,7 @@
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 import {NavigationContainer} from '@react-navigation/native';
+import CheckoutModel from '../viewModel/CheckoutModel';
 import {
   HomeModel,
   ProfileModel,
@@ -25,7 +26,7 @@ const Stack = createStackNavigator();
 const StackNavigator = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="MyCards">
+      <Stack.Navigator initialRouteName="Checkout">
         <Stack.Screen
           name="OnBoarding"
           component={OnBoardingModel}
@@ -69,6 +70,11 @@ const StackNavigator = () => {
         <Stack.Screen
           name="MyCards"
           component={MycardModel}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="Checkout"
+          component={CheckoutModel}
           options={{headerShown: false}}
         />
 

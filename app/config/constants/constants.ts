@@ -34,6 +34,8 @@ const screens = {
     notifi:"NOTIFICATION",
     MY_CARD:"MY CARD",
     AddCard:"Add new card",
+    Checkout:"CHECKOUT",
+    CouponCode:"Coupon Code",
 
     
 }
@@ -60,6 +62,7 @@ const Button = {
     SendEmail:"Send Email",
     buynow:"Buy Now",
     Add:"Add",
+    placeYourOrder:"Place your Order",
 
 
 
