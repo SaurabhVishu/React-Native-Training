@@ -279,7 +279,11 @@ const ScreenData = {
         Price2:"$0.00",
         Total:"Total:",
         totPrice:"$37.97"
-    }
+    },
+    SuccessScreen:{
+        congratulation:"Congratulation!",
+        paymentWasSucess:"Payment was successfully mode!",
+    },
 
 
 }

@@ -1,7 +1,6 @@
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 import {NavigationContainer} from '@react-navigation/native';
-import CheckoutModel from '../viewModel/CheckoutModel';
 import {
   HomeModel,
   ProfileModel,
@@ -14,6 +13,8 @@ import {
   NotificationModel,
   Navigation2Model,
   MycardModel,
+  SuccessModel,
+  CheckoutModel,
 } from '../viewModel';
 
 type RootStackList = {
@@ -26,7 +27,7 @@ const Stack = createStackNavigator();
 const StackNavigator = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Checkout">
+      <Stack.Navigator initialRouteName="Success">
         <Stack.Screen
           name="OnBoarding"
           component={OnBoardingModel}
@@ -75,6 +76,11 @@ const StackNavigator = () => {
         <Stack.Screen
           name="Checkout"
           component={CheckoutModel}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="Success"
+          component={SuccessModel}
           options={{headerShown: false}}
         />
 

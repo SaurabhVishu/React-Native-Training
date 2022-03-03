@@ -63,6 +63,7 @@ const Button = {
     buynow:"Buy Now",
     Add:"Add",
     placeYourOrder:"Place your Order",
+    Done:"Done",
 
 
 

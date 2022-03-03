@@ -10,6 +10,7 @@ import NotificationModel from "./NotificationModel";
 import Navigation2Model from "./Notification2Model";
 import MycardModel from "./MyCardsModel";
 import CheckoutModel from "./CheckoutModel";
+import SuccessModel from "./SuccessModel";
 
 export {ProfileModel,HomeModel,SignInModel,OnBoardingModel,SignUpModel,OtpModel,PassRcvModel,FoodDetailModel,
-    NotificationModel,Navigation2Model,MycardModel,CheckoutModel};
+    NotificationModel,Navigation2Model,MycardModel,CheckoutModel,SuccessModel};
