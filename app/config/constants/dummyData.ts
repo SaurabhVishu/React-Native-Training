@@ -329,6 +329,62 @@ const StarData=[
         icon:icons.star,
     },
 ]
+const DrawerButton=[
+    {
+        title:"Home",
+        icon:icons.home,
+        routeName:'Home'
+    },
+    {
+        title:"My Wallet",
+        icon:icons.wallet,
+        routeName:'Home'
+
+    },
+    {
+        title:"Notification",
+        icon:icons.notification,
+        routeName:'Home'
+
+    },
+    {
+        title:"Favourite",
+        icon:icons.favourite,
+        routeName:'Home'
+
+    },
+    {
+        title:"Track Your Order",
+        icon:icons.location,
+        routeName:'Home'
+
+    },
+    {
+        title:"Coupons",
+        icon:icons.coupon,
+        routeName:'Home'
+
+    },
+    {
+        title:"Setting",
+        icon:icons.setting,
+        routeName:'Home'
+
+    },
+    {
+        title:"invite a Friend",
+        icon:icons.star,
+        routeName:'Home'
+
+    },
+    {
+        title:"Help Center",
+        icon:icons.help,
+        routeName:'Home'
+
+    }
+
+]
 const DATA = [
     {
         title: "Today",
@@ -386,4 +442,5 @@ export default {
     SizeData,
     StarData,
     DATA,
+    DrawerButton,
 }

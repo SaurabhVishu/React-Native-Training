@@ -16,6 +16,8 @@ import {
   SuccessModel,
   CheckoutModel,
 } from '../viewModel';
+import CustomDrawerContent from '../components/CustomDrawer';
+import DrawerNavigation from './DrawerNavigation';
 
 type RootStackList = {
   Home: undefined;
@@ -27,7 +29,7 @@ const Stack = createStackNavigator();
 const StackNavigator = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Success">
+      <Stack.Navigator initialRouteName="Drawer">
         <Stack.Screen
           name="OnBoarding"
           component={OnBoardingModel}
@@ -81,6 +83,11 @@ const StackNavigator = () => {
         <Stack.Screen
           name="Success"
           component={SuccessModel}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="Drawer"
+          component={DrawerNavigation}
           options={{headerShown: false}}
         />
 

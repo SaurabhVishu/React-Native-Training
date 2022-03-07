@@ -49,6 +49,10 @@ const Form = {
     PasswordPlaceholder: "Enter the Password",
     SaveMe: "Save me"
 }
+const DrawerText={
+       ByProgrammer:"ByProgrammers",
+       ViewYourProfile:"View your profile",
+}
 
 const Button = {
     Sign: "Sign in",
@@ -64,6 +68,7 @@ const Button = {
     Add:"Add",
     placeYourOrder:"Place your Order",
     Done:"Done",
+    logout:"logout"
 
 
 
@@ -206,4 +211,5 @@ export default {
     GOOGLE_MAP_API_KEY,
     Form,
     Button,
+    DrawerText,
 }
