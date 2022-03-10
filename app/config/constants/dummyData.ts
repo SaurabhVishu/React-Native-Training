@@ -70,6 +70,110 @@ const wrapSandwich = {
     image: require("../../assets/dummyData/wrap_sandwich.png")
 }
 
+
+const Foodmenu= [
+    {
+    id: 1,
+    name: "Hamburger",
+    description: "Chicken patty hamburger",   
+    price: 15.99,
+    calories: 78,
+    isFavourite: true,
+    image: require("../../assets/dummyData/hamburger.png"),
+    categories: 1,
+    distance:4,
+    rating:1, 
+    time: "30 Mins",
+
+
+
+},
+ {
+    id: 2,
+    name: "Hot Tacos",
+    description: "Mexican tortilla & tacos",
+    price: 10.99,
+    calories: 78,
+    isFavourite: false,
+    image: require("../../assets/dummyData/hot_tacos.png"),
+    categories: 1,
+    distance:8,
+    rating:2, 
+    time: "10 Mins",
+
+},
+
+{
+    id: 3,
+    name: "Veg Biryani",
+    description: "Indian Vegetable Biryani",
+  
+    price: 10.99,
+    calories: 78,
+    isFavourite: true,
+    image: require("../../assets/dummyData/veg_biryani.png"),
+    categories:3,
+    distance:12,
+    rating:3, 
+    time: "30 Mins",
+
+},
+{
+    id: 4,
+    name: "Wrap Sandwich",
+    description: "Grilled vegetables sandwich",
+    price: 10.99,
+    calories: 78,
+    isFavourite: true,
+    image: require("../../assets/dummyData/wrap_sandwich.png"),
+    categories: 1,
+    distance:14,
+    rating:3, 
+    time: "20 Mins",
+
+},
+{
+    id: 5,
+    name: "Fruit mix Sandwich",
+    description: " vegetables sandwich",
+    price: 10.99,
+    calories: 78,
+    isFavourite: true,
+    image: require("../../assets/dummyData/wrap_sandwich.png"),
+    categories:2,
+    distance:3,
+    rating:3, 
+    time: "10 Mins",
+},
+{
+    id: 6,
+    name: "Fruit Sandwich",
+    description: "vegetables sandwich",
+    price: 10.99,
+    calories: 78,
+    isFavourite: true,
+    image: require("../../assets/dummyData/wrap_sandwich.png"),
+    categories:2,
+    distance:4,
+    rating:4, 
+    time: "30 Mins",
+},
+{
+    id: 7,
+    name: "Sandwich",
+    description: "Grilled vegetables sandwich",
+    price: 10.99,
+    calories: 78,
+    isFavourite: true,
+    image: require("../../assets/dummyData/wrap_sandwich.png"),
+    categories:2,
+    distance:5,
+    rating:4, 
+    time: "30 Mins",
+}
+]
+
+
 const menu = [
     {
         id: 1,
@@ -284,6 +388,15 @@ const ScreenData = {
         congratulation:"Congratulation!",
         paymentWasSucess:"Payment was successfully mode!",
     },
+    HomeScreen:{
+           DELIVERYTO:"DELIVERY TO",
+           NO88JlnPodungan:"No.88,jln Padungan,Kuching",
+           PopularNearYOU:"Popular Near You",
+           ShowAll:"Show All",
+           calories:"78 Calories",
+           Recommended:"Recommended",
+
+    },
 
 
 }
@@ -385,6 +498,35 @@ const DrawerButton=[
     }
 
 ]
+
+
+const BottomTab=[
+    {
+        title:"Home",
+        icon:icons.home,
+        routeName:'Home'  
+    },
+    {
+        title:"Search",
+        icon:icons.search,
+        routeName:'Home'  
+    },
+    {
+        title:"MyCart",
+        icon:icons.cart,
+        routeName:'Home'  
+    },
+    {
+        title:"Favourite",
+        icon:icons.favourite,
+        routeName:'Home'  
+    },
+    {
+        title:"Notification",
+        icon:icons.notification,
+        routeName:'Home'  
+    },
+]
 const DATA = [
     {
         title: "Today",
@@ -443,4 +585,6 @@ export default {
     StarData,
     DATA,
     DrawerButton,
+    Foodmenu,
+    BottomTab,
 }

@@ -1,43 +1,36 @@
-import React, { useEffect, useState } from "react";
-import {ActivityIndicator, View} from "react-native"
-import { FetchHomeData } from "../controllers";
-import HomeScreen from "../view/homescreen/homescreen";
+import React,{useState} from "react"
+import { dummyData } from "../config/constants"
+import Home from "../view/Home"
 
-
-interface InputProp {
-    navigation: any
+interface InputProp{
+    navigation:any
 }
 
-const HomeModel = (props: InputProp) => {
-    const { navigation } = props
-    const [IsLoading,setIsLoading]=useState(true)
-    const [data, setData] = useState([])
-    const getHomeData =async () => {
-         let res = await FetchHomeData()
-         setData(res)
-         setIsLoading(false)
-         
-         console.log(res)
-    }
-    useEffect(()=>{
-        getHomeData()
-        return ()=> console.log("Will unmount")
-    },[])
-   //
-    return (
-   <View  style={{flex:1,justifyContent:"center",alignItems:"center"}}>
-       {IsLoading ? <ActivityIndicator size={40}/> : <HomeScreen navigation={navigation} data={data}
-        IsLoading={IsLoading}
-        />}
+const HomeModel=(props:InputProp)=>{
+    const[selected,setSelected]=useState(1)
+    const[Favourite,setFavourite]=useState(false)
+    console.log(selected);
+    const{navigation}=props
+    let data2=dummyData.Foodmenu.filter((a)=>selected==a.categories)
+    //console.log(data2)
 
-
-   </View> 
-    
-        
      
-         )
+    return(
+<Home
+{
+    ...{
+        navigation,
+        data:dummyData.ScreenData.HomeScreen,
+        selected,
+        setSelected,
+        data2,
+        Favourite,
+        setFavourite
+        
+    }
 }
 
+/>
+)
+}
 export default HomeModel
-
-

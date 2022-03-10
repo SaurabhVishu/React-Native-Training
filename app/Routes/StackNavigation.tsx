@@ -18,6 +18,7 @@ import {
 } from '../viewModel';
 import CustomDrawerContent from '../components/CustomDrawer';
 import DrawerNavigation from './DrawerNavigation';
+import BottomTab from './BottomTab';
 
 type RootStackList = {
   Home: undefined;
@@ -29,7 +30,7 @@ const Stack = createStackNavigator();
 const StackNavigator = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Drawer">
+      <Stack.Navigator initialRouteName="BottomTab">
         <Stack.Screen
           name="OnBoarding"
           component={OnBoardingModel}
@@ -90,8 +91,18 @@ const StackNavigator = () => {
           component={DrawerNavigation}
           options={{headerShown: false}}
         />
+        <Stack.Screen
+          name="Home"
+          component={HomeModel}
+          // options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="BottomTab"
+          component={BottomTab}
+          options={{headerShown: false}}
+        />
 
-        <Stack.Screen name="Home" component={HomeModel} />
+        {/* <Stack.Screen name="HomeScreen" component={HomeModel} /> */}
         <Stack.Screen name="Profile" component={ProfileModel} />
       </Stack.Navigator>
     </NavigationContainer>

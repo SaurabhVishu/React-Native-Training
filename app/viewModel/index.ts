@@ -1,5 +1,5 @@
 import ProfileModel from "./profileModel";
-import HomeModel from "./homeModel";
+import HomeScreenModel from "./homeScreenModel";
 import SignInModel from "./SignInModel";
 import OnBoardingModel from "./OnBoardingModel";
 import SignUpModel from "./SignUpModel";
@@ -11,6 +11,7 @@ import Navigation2Model from "./Notification2Model";
 import MycardModel from "./MyCardsModel";
 import CheckoutModel from "./CheckoutModel";
 import SuccessModel from "./SuccessModel";
+import HomeModel from "./homeModel";
 
-export {ProfileModel,HomeModel,SignInModel,OnBoardingModel,SignUpModel,OtpModel,PassRcvModel,FoodDetailModel,
-    NotificationModel,Navigation2Model,MycardModel,CheckoutModel,SuccessModel};
+export {ProfileModel,HomeScreenModel,SignInModel,OnBoardingModel,SignUpModel,OtpModel,PassRcvModel,FoodDetailModel,
+    NotificationModel,Navigation2Model,MycardModel,CheckoutModel,SuccessModel,HomeModel};
