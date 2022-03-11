@@ -602,6 +602,161 @@ const TipsData=[
     },
 ]
 
+const CouponData = [
+
+    {
+
+        id: "1",
+
+        title: "Burger King",
+
+        Subtitle:"20% Off",
+
+        coupon:false,
+
+        icondata: icons.burgerking,
+        valid:"valid untill 01 jan 2022"
+
+    
+
+    },
+
+    {
+
+        id: "2",
+
+        title: "KFC",
+
+        Subtitle:"30% Off",
+
+        coupon:false,
+
+        icondata: icons.KFC,
+        valid:"valid untill 01 jan 2022"
+
+
+      
+
+    },
+
+    {
+
+        id: "3",
+
+        title: "PizzaHuT",
+
+        Subtitle:"40% Off",
+
+        coupon:false,
+
+        icondata: icons.pizzahut,
+        valid:"valid untill 01 jan 2022",
+
+
+      
+
+    },
+
+    {
+
+        id: "4",
+
+        title: "Starbucks",
+
+        Subtitle:"50% Off",
+
+        coupon:false,
+
+        icondata: icons.starbucks,
+        valid:"valid untill 01 jan 2022"
+
+
+      
+
+    },
+
+    {
+
+        id: "5",
+
+        title: "Dominose",
+
+        Subtitle:"20% Off",
+
+        coupon:false,
+
+        icondata: icons.domino,
+        valid:"valid untill 01 jan 2022"
+
+
+      
+
+    },
+
+    {
+
+        id: "6",
+
+        title: "Burger King",
+
+        Subtitle:"30% Off",
+
+        coupon:false,
+
+        icondata: icons.burgerking,
+        valid:"valid untill 01 jan 2022"
+
+
+      
+
+    },
+
+    {
+
+        id: "7",
+
+        title: "KFC",
+
+        Subtitle:"100% Off",
+
+        coupon:true,
+
+        icondata: icons.KFC,
+        valid:"Used on 02 sep 2021"
+
+
+      
+
+    },
+
+    {
+
+        id: "8",
+
+        title: "Pizza Point",
+
+        Subtitle:"20% Off",
+
+        coupon:true,
+
+        icondata: icons.pizzahut,
+        valid:"Used on 02 sep 2021"
+
+      
+
+    },
+
+   
+
+]
+
+
+
+
+
+
+
+
 
 
 export default {
@@ -623,4 +778,6 @@ export default {
     Foodmenu,
     BottomTab,
     TipsData,
+ CouponData
+
 }

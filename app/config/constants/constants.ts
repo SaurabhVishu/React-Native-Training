@@ -37,6 +37,7 @@ const screens = {
     Checkout:"CHECKOUT",
     CouponCode:"Coupon Code",
     RIDERRIVIEW:"RIDER REVIEW",
+    Mycoupon:"MY COUPON",
 
     
 }
@@ -70,7 +71,9 @@ const Button = {
     placeYourOrder:"Place your Order",
     Done:"Done",
     logout:"logout",
-    SubmitReview:"Submit Review"
+    SubmitReview:"Submit Review",
+    Available:"Available",
+    Used:"Used",
 
 
 

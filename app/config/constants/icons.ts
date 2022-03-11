@@ -52,10 +52,16 @@ const navigator1 = require("../../assets/icons/navigator1.png")
 const check= require("../../assets/icons/check.png")
 const veg_biryani= require("../../assets/icons/veg_biryani.png")
 const domino= require("../../assets/icons/domino.png")
+const starbucks= require("../../assets/icons/Starbucks.png")
+const pizzahut= require("../../assets/icons/pizzHut.png")
+const KFC= require("../../assets/icons/KFC.png")
+const burgerking= require("../../assets/icons/burgerking.png")
+
 
 
 export default {
     apple,
+    KFC,
     back,
     coupon,
     cross,
@@ -108,5 +114,8 @@ export default {
     navigator,
     navigator1,
     veg_biryani,
-    domino
+    domino,
+    starbucks,
+    pizzahut,
+    burgerking
 }

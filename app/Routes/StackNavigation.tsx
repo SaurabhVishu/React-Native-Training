@@ -15,7 +15,8 @@ import {
   MycardModel,
   SuccessModel,
   CheckoutModel,
-  RiderRivewModel
+  RiderRivewModel,
+  MyCouponModel 
 } from '../viewModel';
 import CustomDrawerContent from '../components/CustomDrawer';
 import DrawerNavigation from './DrawerNavigation';
@@ -32,7 +33,7 @@ const Stack = createStackNavigator();
 const StackNavigator = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="RiderReview">
+      <Stack.Navigator initialRouteName="MyCoupon">
         <Stack.Screen
           name="OnBoarding"
           component={OnBoardingModel}
@@ -106,6 +107,11 @@ const StackNavigator = () => {
         <Stack.Screen
           name="RiderReview"
           component={RiderRivewModel}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="MyCoupon"
+          component={MyCouponModel}
           options={{headerShown: false}}
         />
 

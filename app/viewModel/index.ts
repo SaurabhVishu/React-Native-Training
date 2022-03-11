@@ -13,6 +13,7 @@ import CheckoutModel from "./CheckoutModel";
 import SuccessModel from "./SuccessModel";
 import HomeModel from "./homeModel";
 import RiderRivewModel from "./RiderReviewModel";
+import MyCouponModel from "./MyCouponModel";
 
 export {ProfileModel,HomeScreenModel,SignInModel,OnBoardingModel,SignUpModel,OtpModel,PassRcvModel,FoodDetailModel,
-    NotificationModel,Navigation2Model,MycardModel,CheckoutModel,SuccessModel,HomeModel,RiderRivewModel};
+    NotificationModel,Navigation2Model,MycardModel,CheckoutModel,SuccessModel,HomeModel,RiderRivewModel,MyCouponModel};
