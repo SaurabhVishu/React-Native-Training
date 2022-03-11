@@ -397,6 +397,16 @@ const ScreenData = {
            Recommended:"Recommended",
 
     },
+    RiderRivewScreen:{
+        title:"RIDER REVIEW",
+        name:"William Adam",
+        DeliveryMan:"Delivery Man",
+        OrderDeliverd:". Order Delivered",
+        pleaseRateService:"Please rate Delivery service",
+        addTips:"Add Tips",
+        
+
+    },
 
 
 }
@@ -568,6 +578,31 @@ const DATA = [
 ];
 
 
+const TipsData=[
+    
+    {
+        id:1,
+        title:"No Tips"
+    },
+    {
+        id:2,
+        title:"$5"
+    },
+    {
+        id:3,
+        title:"$10"
+    },
+    {
+        id:4,
+        title:"$15"
+    },
+    {
+        id:5,
+        title:"$20"
+    },
+]
+
+
 
 export default {
     vegBiryani,
@@ -587,4 +622,5 @@ export default {
     DrawerButton,
     Foodmenu,
     BottomTab,
+    TipsData,
 }

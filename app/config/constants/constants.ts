@@ -36,6 +36,7 @@ const screens = {
     AddCard:"Add new card",
     Checkout:"CHECKOUT",
     CouponCode:"Coupon Code",
+    RIDERRIVIEW:"RIDER REVIEW",
 
     
 }
@@ -68,7 +69,9 @@ const Button = {
     Add:"Add",
     placeYourOrder:"Place your Order",
     Done:"Done",
-    logout:"logout"
+    logout:"logout",
+    SubmitReview:"Submit Review"
+
 
 
 

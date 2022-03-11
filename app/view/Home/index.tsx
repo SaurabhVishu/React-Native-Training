@@ -16,24 +16,12 @@ import styles from './style';
 
 interface InputProp {
   navigation: any;
-  data:HomeScreendata ;
-  selected: number;
+  data:any ;
+  selected: any;
   setSelected: any;
-  data2: {
-    id: number;
-    name: string;
-    description: string;
-    price: number;
-    calories: number;
-    isFavourite: boolean;
-    image: any;
-    categories: number;
-    distance: number;
-    rating: number;
-    time: string;
-  }[];
+  data2: any;
 
-  Favourite: number;
+  Favourite: any;
   setFavourite: any;
 }
 

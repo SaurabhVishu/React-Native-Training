@@ -12,6 +12,7 @@ import MycardModel from "./MyCardsModel";
 import CheckoutModel from "./CheckoutModel";
 import SuccessModel from "./SuccessModel";
 import HomeModel from "./homeModel";
+import RiderRivewModel from "./RiderReviewModel";
 
 export {ProfileModel,HomeScreenModel,SignInModel,OnBoardingModel,SignUpModel,OtpModel,PassRcvModel,FoodDetailModel,
-    NotificationModel,Navigation2Model,MycardModel,CheckoutModel,SuccessModel,HomeModel};
+    NotificationModel,Navigation2Model,MycardModel,CheckoutModel,SuccessModel,HomeModel,RiderRivewModel};

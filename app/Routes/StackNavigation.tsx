@@ -15,10 +15,12 @@ import {
   MycardModel,
   SuccessModel,
   CheckoutModel,
+  RiderRivewModel
 } from '../viewModel';
 import CustomDrawerContent from '../components/CustomDrawer';
 import DrawerNavigation from './DrawerNavigation';
 import BottomTab from './BottomTab';
+
 
 type RootStackList = {
   Home: undefined;
@@ -30,7 +32,7 @@ const Stack = createStackNavigator();
 const StackNavigator = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="BottomTab">
+      <Stack.Navigator initialRouteName="RiderReview">
         <Stack.Screen
           name="OnBoarding"
           component={OnBoardingModel}
@@ -99,6 +101,11 @@ const StackNavigator = () => {
         <Stack.Screen
           name="BottomTab"
           component={BottomTab}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="RiderReview"
+          component={RiderRivewModel}
           options={{headerShown: false}}
         />
 
