@@ -1,6 +1,7 @@
 import PassRcvScreen from "../../view/PasswordRecovery"
 import FoodDeatail from '../../view/FoodDetail/index';
 import icons from "./icons";
+import constants from "./constants";
 
 const myProfile = {
     name: "ByProgrammers",
@@ -750,7 +751,229 @@ const CouponData = [
 
 ]
 
+const HistoryDATA = [
 
+    {
+
+        title: "19 Sep 2021",
+
+        data: [
+
+            {
+
+                title: "Pizza Hut",
+
+                time: "19 Sep, 14:30 . 3 items",
+
+                subtitle:"Order Delivered",
+
+                image:icons.pizzahut,
+
+                price:"35.30",
+
+                button1:constants.Button.reorder,
+
+                button2:constants.Button.rate
+
+
+
+
+            },
+
+            {
+
+                title: "KFC",
+
+                time: "19 Sep, 12:30 . 3 items",
+
+                subtitle:"Order Delivered",
+
+                image:icons.KFC,
+
+                price:"55.00",
+
+                button1:constants.Button.reorder,
+
+                button2:constants.Button.rate
+
+            },
+
+            {
+
+                title: "Domino's Pizza",
+
+                time: "19 Sep, 12:30 . 3 items",
+
+                subtitle:"Order Canceled",
+
+                image:icons.domino,
+
+                price:"15.00",
+
+                
+
+                button1:constants.Button.reorder,
+
+                button2:constants.Button.rate
+
+            },
+
+            ]
+
+    },
+
+    {
+
+        title: "15 Sep 2021",
+
+        data: [
+
+            {
+
+                title: "Domino's Pizza",
+
+                time: "15 Sep, 12:30 . 3 items",
+
+                subtitle:"Order Delivered",
+
+                image:icons.domino,
+
+                price:"35.30",
+
+                button1:constants.Button.reorder,
+
+                button2:constants.Button.rate
+
+            },
+
+            {
+
+                title: "Starbucks",
+
+                time: "15 Sep, 12:30 . 3 items",
+
+                subtitle:"Order Delivered",
+
+                image:icons.starbucks,
+
+                price:"35.30",
+
+                button1:constants.Button.reorder,
+
+                button2:constants.Button.rate
+
+            },
+
+            
+
+            ]
+
+    },
+
+];
+
+const UpcomingDATA = [
+
+    {
+
+        title: "",
+
+        data: [
+
+            {
+
+                title: "Starbucks",
+
+                time: "19 Sep, 14:30 . 3 items",
+
+                subtitle:"Order Delivered",
+
+                image:icons.starbucks,
+
+                price:"#888",
+
+                button1:constants.Button.Trackorder,
+
+                button2:constants.Button.cancel
+
+
+
+
+            },
+
+            {
+
+                title: "KFC",
+
+                time: "19 Sep, 12:30 . 3 items",
+
+                subtitle:"Order Delivered",
+
+                image:icons.KFC,
+
+                price:"#888",
+
+                button1:constants.Button.Trackorder,
+
+                button2:constants.Button.cancel
+
+            },
+
+            
+
+            ]
+
+    },
+
+    {
+
+        title: "Latest Order",
+
+        data: [
+
+            {
+
+                title: "Domino's Pizza",
+
+                time: "15 Sep, 12:30 . 3 items",
+
+                subtitle:"Order Delivered",
+
+                image:icons.domino,
+
+                price:"15",
+
+                button1:constants.Button.reorder,
+
+                button2:constants.Button.rate
+
+            },
+
+            {
+
+                title: "BurgerKing",
+
+                time: "15 Sep, 12:30 . 3 items",
+
+                subtitle:"Order Delivered",
+
+                image:icons.burgerking,
+
+                price:35.30,
+
+                button1:constants.Button.reorder,
+
+                button2:constants.Button.rate
+
+            },
+
+            
+
+            ]
+
+    },
+
+];
 
 
 
@@ -764,6 +987,8 @@ export default {
     hamburger,
     myProfile,
     categories,
+    UpcomingDATA,
+    HistoryDATA,
     menu,
     sizes,
     myCart,
