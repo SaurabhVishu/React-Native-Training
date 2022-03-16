@@ -52,7 +52,7 @@ interface InputProp {
 
 const MyOrder = (props: InputProp) => {
   const {navigation, selected, setSelected, UpcomingData, HistoryData,touch,setTouch} = props;
-
+ 
   return (
     <View style={styles.mainContainer}>
       <Header

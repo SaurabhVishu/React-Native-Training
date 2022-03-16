@@ -22,6 +22,7 @@ import {
 import CustomDrawerContent from '../components/CustomDrawer';
 import DrawerNavigation from './DrawerNavigation';
 import BottomTab from './BottomTab';
+import HomeScreen from '../view/homescreen/homescreen';
 
 
 type RootStackList = {
@@ -34,7 +35,7 @@ const Stack = createStackNavigator();
 const StackNavigator = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="MyOrder">
+      <Stack.Navigator initialRouteName="HomeScreen">
         <Stack.Screen
           name="OnBoarding"
           component={OnBoardingModel}
@@ -122,7 +123,7 @@ const StackNavigator = () => {
           options={{headerShown: false}}
         />
 
-        {/* <Stack.Screen name="HomeScreen" component={HomeModel} /> */}
+         <Stack.Screen name="HomeScreen"  options={{headerShown: false}} component={HomeScreen} /> 
         <Stack.Screen name="Profile" component={ProfileModel} />
       </Stack.Navigator>
     </NavigationContainer>

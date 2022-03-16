@@ -30,7 +30,6 @@ interface Inptprop{
 }
 
 const HistoryItem =( props: Inptprop)=>{
-  // const[touch,setTouch]=useState( false)
   
     const {item, index,touch,setTouch} =props;
     console.log(index);
