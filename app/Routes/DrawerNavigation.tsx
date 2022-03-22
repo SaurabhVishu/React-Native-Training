@@ -1,7 +1,7 @@
 import React from 'react';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import CustomDrawerContent from '../components/CustomDrawer';
-import SuccessModel from '../viewModel/SuccessModel';
+import SuccessModel from '../viewModel/SuccessViewModel';
 
 const Drawer = createDrawerNavigator();
 
