@@ -39,6 +39,7 @@ const screens = {
     RIDERRIVIEW:"RIDER REVIEW",
     Mycoupon:"MY COUPON",
     MyOrders:"My ORDERS",
+    ChangePassword:"CHANGE PASSWORD",
 
     
 }
@@ -81,6 +82,8 @@ const Button = {
     cancel:"cancel",
     History:"History",
     Upcoming:"Upcoming",
+    ChangePassword:"Change password",
+
 
 }
 

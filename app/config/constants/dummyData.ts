@@ -975,7 +975,20 @@ const UpcomingDATA = [
 
 ];
 
-
+const ChangePassword=[
+    {
+        id:1,
+        label:"Current Password",
+    },
+    {
+        id:2,
+        label:"New Password",
+    },
+    {
+        id:3,
+        label:"Retype New Password",
+    },
+]
 
 
 
@@ -1003,6 +1016,7 @@ export default {
     Foodmenu,
     BottomTab,
     TipsData,
- CouponData
+    CouponData,
+   ChangePassword
 
 }
