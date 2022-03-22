@@ -40,6 +40,7 @@ const screens = {
     Mycoupon:"MY COUPON",
     MyOrders:"My ORDERS",
     ChangePassword:"CHANGE PASSWORD",
+    Settings:"SETTINGS",
 
     
 }

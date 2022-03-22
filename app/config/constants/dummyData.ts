@@ -989,7 +989,58 @@ const ChangePassword=[
         label:"Retype New Password",
     },
 ]
-
+const Settings=[
+    {
+        id:1,
+        title:"Change Password",
+        icon:icons.clock,
+    },
+    {
+        id:2,
+        title:"Preferences",
+        icon:icons.filter,
+    },
+    {
+        id:3,
+        title:"Notification",
+        icon:icons.notification,
+    },
+    {
+        id:4,
+        title:"Data use",
+        icon:icons.map,
+    },
+    {
+        id:5,
+        title:"Language",
+        icon:icons.globe,
+    },
+    {
+        id:6,
+        title:"Check Updates",
+        icon:icons.help,
+    },
+    {
+        id:7,
+        title:"Contact Us",
+        icon:icons.call,
+    },
+    {
+        id:8,
+        title:"Privacy Policy",
+        icon:icons.location,
+    },
+    {
+        id:9,
+        title:"Terms & Conditions",
+        icon:icons.clock,
+    },
+    {
+        id:10,
+        title:"Logout",
+        icon:icons.logout,
+    },
+]
 
 
 
@@ -998,6 +1049,7 @@ const ChangePassword=[
 export default {
     vegBiryani,
     hamburger,
+    Settings,
     myProfile,
     categories,
     UpcomingDATA,

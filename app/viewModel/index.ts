@@ -16,7 +16,8 @@ import RiderRivewModel from "./RiderReviewModel";
 import MyCouponModel from "./MyCouponModel";
 import MyOrderModel from "./MyOrderModel";
 import ChangePasswordModel from "./ChangePasswordModel";
+import SettingsModel from "./SettingsViewModel";
 export {ProfileModel,HomeScreenModel,SignInModel,OnBoardingModel,SignUpModel,OtpModel,PassRcvModel,FoodDetailModel,
     NotificationModel,Navigation2Model,MycardModel,CheckoutModel,SuccessModel,HomeModel,
-    RiderRivewModel,MyCouponModel,MyOrderModel,ChangePasswordModel
+    RiderRivewModel,MyCouponModel,MyOrderModel,ChangePasswordModel,SettingsModel
 };
