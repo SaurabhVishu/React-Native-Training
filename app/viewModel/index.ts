@@ -17,6 +17,7 @@ import MyCouponModel from './MyCouponViewModel';
 import MyOrderModel from './MyOrderViewModel';
 import ChangePasswordModel from './ChangePasswordViewModel';
 import SettingsModel from './SettingsViewModel';
+import AddNewCardModel from './AddNewCardViewModel';
 export {
   ProfileModel,
   HomeScreenModel,
@@ -37,4 +38,5 @@ export {
   MyOrderModel,
   ChangePasswordModel,
   SettingsModel,
+  AddNewCardModel
 };

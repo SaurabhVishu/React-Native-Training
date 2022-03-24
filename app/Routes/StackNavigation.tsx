@@ -19,7 +19,8 @@ import {
   MyCouponModel,
   MyOrderModel,
   ChangePasswordModel,
-  SettingsModel
+  SettingsModel,
+  AddNewCardModel,
 } from '../viewModel';
 import CustomDrawerContent from '../components/CustomDrawer';
 import DrawerNavigation from './DrawerNavigation';
@@ -36,7 +37,7 @@ const Stack = createStackNavigator();
 const StackNavigator = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Settings">
+      <Stack.Navigator initialRouteName="AddNewCard">
         <Stack.Screen
           name="OnBoarding"
           component={OnBoardingModel}
@@ -137,6 +138,11 @@ const StackNavigator = () => {
           name="Settings"
           options={{headerShown: false}}
           component={SettingsModel}
+        />
+        <Stack.Screen
+          name="AddNewCard"
+          options={{headerShown: false}}
+          component={AddNewCardModel}
         />
         <Stack.Screen name="Profile" component={ProfileModel} />
       </Stack.Navigator>

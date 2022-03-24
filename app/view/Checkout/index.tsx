@@ -9,7 +9,7 @@ import {
   TouchableWithoutFeedback,
 } from 'react-native';
 import {MainButton} from '../../Common';
-import Header from '../../Common/Header/header';
+import Header from '../../Common/Header';
 import {constants, icons} from '../../config/constants';
 import { Mycard, Textdata } from '../../Models';
 import styles from './style';

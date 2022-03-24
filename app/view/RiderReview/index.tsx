@@ -1,7 +1,7 @@
 import React from 'react';
 import {View, Text, Image, TouchableOpacity,TextInput} from 'react-native';
 import { MainButton } from '../../Common';
-import Header from '../../Common/Header/header';
+import Header from '../../Common/Header';
 import {COLORS, constants, dummyData, icons, images} from '../../config/constants';
 import styles from './style';
 

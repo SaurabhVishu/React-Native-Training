@@ -1,6 +1,6 @@
 import React from 'react';
 import {View, Text, SectionList, Image} from 'react-native';
-import Header from '../../Common/Header/header';
+import Header from '../../Common/Header';
 import {constants, icons} from '../../config/constants';
 import styles from './style';
 

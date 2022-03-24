@@ -2,7 +2,7 @@ import React from 'react';
 import {View, Text,Image,TouchableOpacity} from 'react-native';
 import { constants, icons } from '../../config/constants';
 import styles from './style';
-import Header from '../../Common/Header/header';
+import Header from '../../Common/Header';
 
 interface Inputprop {
   navigation: any;

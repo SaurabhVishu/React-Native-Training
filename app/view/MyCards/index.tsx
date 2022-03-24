@@ -1,6 +1,6 @@
 import React from 'react';
 import {View, Text, Image,ScrollView,TouchableOpacity} from 'react-native';
-import Header from '../../Common/Header/header';
+import Header from '../../Common/Header';
 import {constants, icons} from '../../config/constants';
 import styles from './style';
 import MainButton from '../../Common/MainButton';

@@ -1,6 +1,6 @@
 import React from 'react';
 import {View, Text, TouchableOpacity, FlatList, Image} from 'react-native';
-import Header from '../../Common/Header/header';
+import Header from '../../Common/Header';
 import {COLORS, constants, dummyData, icons} from '../../config/constants';
 import styles from './style';
 

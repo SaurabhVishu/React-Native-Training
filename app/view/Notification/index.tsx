@@ -1,7 +1,7 @@
 import React from 'react';
 import {View, Text, Image, Switch} from 'react-native';
 import styles from './style';
-import Header from '../../Common/Header/header';
+import Header from '../../Common/Header';
 import {constants, icons} from '../../config/constants';
 
 interface InputProp {

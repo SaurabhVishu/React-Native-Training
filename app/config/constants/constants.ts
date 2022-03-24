@@ -41,6 +41,7 @@ const screens = {
     MyOrders:"My ORDERS",
     ChangePassword:"CHANGE PASSWORD",
     Settings:"SETTINGS",
+    addNewCard:"ADD NEW CARD",
 
     
 }
@@ -84,6 +85,7 @@ const Button = {
     History:"History",
     Upcoming:"Upcoming",
     ChangePassword:"Change password",
+    AddCard:"Add Card"
 
 
 }

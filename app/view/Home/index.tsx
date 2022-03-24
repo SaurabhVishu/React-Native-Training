@@ -9,7 +9,7 @@ import {
   FlatList,
   ScrollView,
 } from 'react-native';
-import Header from '../../Common/Header/header';
+import Header from '../../Common/Header';
 import {constants, dummyData, icons} from '../../config/constants';
 import { HomeScreendata } from '../../Models';
 import styles from './style';

@@ -408,6 +408,16 @@ const ScreenData = {
         
 
     },
+    AddNewCard:{
+        Byprogrammers:"ByProgrammers",
+        CardNum:"12312341234123234",
+        Date:"10/25",
+        cardNumber:"Card Number",
+        CardHolderName:"Card Holder Name",
+        ExpiryDate:"Expiry Date",
+        CVV:"CVV",
+        RememberThisCardDetail:"Remember this Card details",
+    },
 
 
 }

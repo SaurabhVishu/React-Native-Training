@@ -1,7 +1,7 @@
 import React from 'react';
 import {View, Text, TextInput, Image} from 'react-native';
 import { MainButton } from '../../Common';
-import Header from '../../Common/Header/header';
+import Header from '../../Common/Header';
 import {constants, dummyData, icons} from '../../config/constants';
 import styles from './style';
 
