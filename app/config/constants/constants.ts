@@ -33,6 +33,7 @@ const screens = {
     deatil:"DETAIL",
     notifi:"NOTIFICATION",
     MY_CARD:"MY CARD",
+    MY_CART:"MY CART",
     AddCard:"Add new card",
     Checkout:"CHECKOUT",
     CouponCode:"Coupon Code",

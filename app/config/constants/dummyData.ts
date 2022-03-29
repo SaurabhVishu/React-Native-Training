@@ -2,6 +2,7 @@ import PassRcvScreen from "../../view/PasswordRecovery"
 import FoodDeatail from '../../view/FoodDetail/index';
 import icons from "./icons";
 import constants from "./constants";
+import images from "./images";
 
 const myProfile = {
     name: "ByProgrammers",
@@ -1052,6 +1053,38 @@ const Settings=[
     },
 ]
 
+const MyCart=[
+    {
+        id:1,
+        title:"Hamburger",
+        icon:hamburger.image,
+        price:"$15.99",
+        add:icons.plus,
+        minus:icons.minus,
+        count:0
+    },
+    {
+        id:2,
+        title:"Hot Tacos",
+        icon:hotTacos.image,
+        price:"$10.99",
+        add:icons.plus,
+        minus:icons.minus,
+        count:1
+
+    },
+    {
+        id:3,
+        title:"Veg Biryani",
+        icon:vegBiryani.image,
+        price:"$10.99",
+        add:icons.plus,
+        minus:icons.minus,
+        count:1
+
+    },
+]
+
 
 
 
@@ -1079,6 +1112,7 @@ export default {
     BottomTab,
     TipsData,
     CouponData,
-   ChangePassword
+   ChangePassword,
+   MyCart
 
 }
