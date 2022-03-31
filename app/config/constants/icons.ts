@@ -56,12 +56,15 @@ const starbucks= require("../../assets/icons/Starbucks.png")
 const pizzahut= require("../../assets/icons/pizzHut.png")
 const KFC= require("../../assets/icons/KFC.png")
 const burgerking= require("../../assets/icons/burgerking.png")
+const calendar= require("../../assets/icons/calendar.png")
+
 
 
 
 export default {
     apple,
     KFC,
+    calendar,
     back,
     coupon,
     cross,

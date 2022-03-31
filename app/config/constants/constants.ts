@@ -43,6 +43,7 @@ const screens = {
     ChangePassword:"CHANGE PASSWORD",
     Settings:"SETTINGS",
     addNewCard:"ADD NEW CARD",
+    My_Account:"MY ACCOUNT",
 
     
 }
@@ -86,7 +87,8 @@ const Button = {
     History:"History",
     Upcoming:"Upcoming",
     ChangePassword:"Change password",
-    AddCard:"Add Card"
+    AddCard:"Add Card",
+    Save:"Save",
 
 
 }

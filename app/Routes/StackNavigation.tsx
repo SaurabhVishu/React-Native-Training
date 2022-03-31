@@ -22,6 +22,7 @@ import {
   SettingsModel,
   AddNewCardModel,
   MyCartViewModel,
+  EditAccountViewModel
 } from '../viewModel';
 import CustomDrawerContent from '../components/CustomDrawer';
 import DrawerNavigation from './DrawerNavigation';
@@ -38,7 +39,7 @@ const Stack = createStackNavigator();
 const StackNavigator = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="MyCart">
+      <Stack.Navigator initialRouteName="EditAccount">
         <Stack.Screen
           name="OnBoarding"
           component={OnBoardingModel}
@@ -149,6 +150,11 @@ const StackNavigator = () => {
           name="MyCart"
           options={{headerShown: false}}
           component={MyCartViewModel}
+        />
+         <Stack.Screen
+          name="EditAccount"
+          options={{headerShown: false}}
+          component={EditAccountViewModel}
         />
         <Stack.Screen name="Profile" component={ProfileModel} />
       </Stack.Navigator>
