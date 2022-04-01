@@ -19,6 +19,7 @@ import ChangePasswordModel from './ChangePasswordViewModel';
 import SettingsModel from './SettingsViewModel';
 import AddNewCardModel from './AddNewCardViewModel'
 import MyCartViewModel from './MyCartView';
+import DeliveryStatusModel from './DeliveryStatusViewModel';
 export {
   ProfileModel,
   HomeScreenModel,
@@ -40,5 +41,6 @@ export {
   ChangePasswordModel,
   SettingsModel,
   AddNewCardModel,
-  MyCartViewModel
+  MyCartViewModel,
+  DeliveryStatusModel
 };

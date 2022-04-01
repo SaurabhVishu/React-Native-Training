@@ -86,7 +86,8 @@ const Button = {
     History:"History",
     Upcoming:"Upcoming",
     ChangePassword:"Change password",
-    AddCard:"Add Card"
+    AddCard:"Add Card",
+    Map:"Map View",
 
 
 }
