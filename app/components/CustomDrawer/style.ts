@@ -44,6 +44,16 @@ export default StyleSheet.create({
     borderColor:COLORS.lightGray1,
     marginVertical: 5,
   },
+  title:{
+    fontSize:18,
+    color:COLORS.gray,
+    fontWeight:"800"
+  },
+  icon:{
+    height:45,
+    width:45,
+    tintColor:"black"
+  },
 mapItemView:{
 
         flexDirection: 'row',

@@ -18,6 +18,17 @@ const MyOrderModel=(props:InputProp)=>{
     const dispatch=useDispatch();
     // console.log(counter);
 
+
+    const newProps = {
+         navigation,
+               selected,
+               setSelected,
+               HistoryData:dummyData.HistoryDATA,
+               UpcomingData:dummyData.UpcomingDATA,
+               touch,
+               setTouch
+    }
+
     return(
            <MyOrder
            {...{

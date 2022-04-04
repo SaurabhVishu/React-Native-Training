@@ -8,6 +8,8 @@ interface InputProp{
 
 const AddNewCardModel=(props:InputProp)=>{
     const{navigation}=props
+
+    
     return(
         <AddNewCard
         {...{

@@ -88,7 +88,8 @@ const Button = {
     ChangePassword:"Change password",
     AddCard:"Add Card",
     Map:"Map View",
-
+    Byprogrammer:"ByProgrammers",
+    DeliveryMan:"Delivery Mans"
 
 }
 

@@ -992,6 +992,32 @@ const DeliveryStatusData = [
     subtitle: 'Help us improve our service',
   },
 ];
+const MapData = [
+  {
+    id: 1,
+    title: 'Your delivery time',
+    time: '8 minutes',
+  },
+  {
+    id: 1,
+    title: 'Your delivery time',
+    time: '8 minutes',
+  },
+];
+const MapViewData=[
+  {
+    id:1,
+    title:"Your delivery time",
+    time:"8 minutes",
+    icon:icons.clock
+  },
+  {
+    id:2,
+    title:"Your address",
+    time:"88, jln Podungan,Kuching",
+    icon:icons.focus
+  },
+]
 
 export default {
   vegBiryani,
@@ -1019,4 +1045,5 @@ export default {
   CouponData,
   ChangePassword,
   MyCart,
+  MapViewData
 };

@@ -20,6 +20,7 @@ import SettingsModel from './SettingsViewModel';
 import AddNewCardModel from './AddNewCardViewModel'
 import MyCartViewModel from './MyCartView';
 import DeliveryStatusModel from './DeliveryStatusViewModel';
+import MapViewModel from './mapViewModel';
 export {
   ProfileModel,
   HomeScreenModel,
@@ -42,5 +43,6 @@ export {
   SettingsModel,
   AddNewCardModel,
   MyCartViewModel,
-  DeliveryStatusModel
+  DeliveryStatusModel,
+  MapViewModel
 };

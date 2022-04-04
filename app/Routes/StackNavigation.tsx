@@ -23,6 +23,7 @@ import {
   AddNewCardModel,
   MyCartViewModel,
   DeliveryStatusModel,
+  MapViewModel,
 } from '../viewModel';
 import CustomDrawerContent from '../components/CustomDrawer';
 import DrawerNavigation from './DrawerNavigation';
@@ -39,7 +40,7 @@ const Stack = createStackNavigator();
 const StackNavigator = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="DeliveryStatus">
+      <Stack.Navigator initialRouteName="MapView">
         <Stack.Screen
           name="OnBoarding"
           component={OnBoardingModel}
@@ -156,6 +157,12 @@ const StackNavigator = () => {
           options={{headerShown: false}}
           component={DeliveryStatusModel}
         />
+                 <Stack.Screen
+          name="MapView"
+          options={{headerShown: false}}
+          component={MapViewModel}
+        />
+
 
         <Stack.Screen name="Profile" component={ProfileModel} />
       </Stack.Navigator>
