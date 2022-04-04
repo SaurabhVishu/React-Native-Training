@@ -125,7 +125,7 @@ const MyCart = (props: Inputprop) => {
           <Text style={styles.Totaltext}>{text.Total}</Text>
           <Text style={styles.Totaltext}>{text.totPrice}</Text>
         </View>
-
+        //shdgfygsukff
         <MainButton name={constants.Button.placeYourOrder} />
       </View>
     </SafeAreaView>
