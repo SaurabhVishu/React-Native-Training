@@ -4,6 +4,8 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import MyTabBar from '../components/CustomBottomTab';
 import {HomeModel} from '../viewModel';
+import MyCartViewModel from '../viewModel/MyCartView';
+import NotificationModel from '../viewModel/NotificationViewModel';
 
 const Tab = createBottomTabNavigator();
 
@@ -15,6 +17,17 @@ const BottomTab = () => {
         component={HomeModel}
         options={{headerShown: false}}
       />
+      {/* <Tab.Screen
+        name="MyCart"
+        component={MyCartViewModel}
+        options={{headerShown: false}}
+      />
+      <Tab.Screen
+        name="Notification"
+        component={NotificationModel}
+        options={{headerShown: false}}
+      /> */}
+      
     </Tab.Navigator>
   );
 };

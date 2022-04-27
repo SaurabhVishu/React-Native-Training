@@ -70,7 +70,7 @@ const SignInScreen = (props: InputProp) => {
 
 
                 <TouchableOpacity
-                    style={styles.Button}>
+                    style={styles.Button} onPress={()=>navigation.navigate('Drawer')}>
                     <Text style={styles.signinTxt}>{constants.Button.Sign}</Text>
                 </TouchableOpacity>
 

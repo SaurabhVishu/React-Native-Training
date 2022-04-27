@@ -1,16 +1,11 @@
 import React from 'react';
-import {
-  View,
-  Text,
-  SafeAreaView,
-  Image,
-  TouchableOpacity,
-} from 'react-native';
+import {View, Text, SafeAreaView, Image, TouchableOpacity} from 'react-native';
 import {Header, MainButton} from '../../Common';
 import {constants, icons} from '../../config/constants';
 import Swipeable from 'react-native-gesture-handler/Swipeable';
 import styles from './style';
 import Swipeleft from './Swipeleft';
+import {ScrollView} from 'react-native-gesture-handler';
 
 interface Inputprop {
   navigation: any;
@@ -74,60 +69,63 @@ const MyCart = (props: Inputprop) => {
         leftIcon={icons.back}
         rytIcon={icons.cart}
       />
+      <ScrollView>
+        <View>
+          {data.map((item: any, index: number) => {
+            return (
+              <View style={styles.mainMapView} key={index}>
+                <Swipeable
+                  renderRightActions={() => <Swipeleft />}
+                  rightThreshold={0.5}>
+                  <View style={styles.renderView} key={index}>
+                    <Image source={item.icon} style={styles.image} />
 
-      <View style={{flex: 1}}>
-        {data.map((item: any, index: number) => {
-          return (
-            <View style={styles.mainMapView} key={index}>
-              <Swipeable
-                renderRightActions={() => <Swipeleft/>}
-                rightThreshold={0.5}>
-                <View style={styles.renderView} key={index}>
-                  <Image source={item.icon} style={styles.image} />
-                  <View>
-                    <Text style={styles.title}>{item.title}</Text>
-                    <Text style={styles.price}>{item.price}</Text>
+                    <View>
+                      <Text style={styles.title}>{item.title}</Text>
+                      <Text style={styles.price}>{item.price}</Text>
+                    </View>
+                    <View style={styles.addContainer}>
+                      <TouchableOpacity
+                        onPress={() => (
+                          DecrementCount(item.count, index),
+                          setModalVisible(true)
+                        )}>
+                        <Image source={item.minus} style={styles.add} />
+                      </TouchableOpacity>
+                      <Text style={styles.count}>{item.count}</Text>
+                      <TouchableOpacity
+                        onPress={() => (
+                          IncrementCount(item.count, index),
+                          setModalVisible(true)
+                        )}>
+                        <Image source={item.add} style={styles.add} />
+                      </TouchableOpacity>
+                    </View>
                   </View>
-                  <View style={styles.addContainer}>
-                    <TouchableOpacity
-                      onPress={() => (
-                        DecrementCount(item.count, index), setModalVisible(true)
-                      )}>
-                      <Image source={item.minus} style={styles.add} />
-                    </TouchableOpacity>
-                    <Text style={styles.count}>{item.count}</Text>
-                    <TouchableOpacity
-                      onPress={() => (
-                        IncrementCount(item.count, index), setModalVisible(true)
-                      )}>
-                      <Image source={item.add} style={styles.add} />
-                    </TouchableOpacity>
-                  </View>
-                </View>
-              </Swipeable>
+                </Swipeable>
+              </View>
+            );
+          })}
+        </View>
+
+        <View style={styles.ModalViewContainer}>
+          <View style={styles.ModalPriceTextCont}>
+            <View>
+              <Text style={styles.title}>{text.subTotal}</Text>
+              <Text style={styles.title}>{text.ShipingFee}</Text>
             </View>
-          );
-        })}
-      </View>
-
-      <View style={styles.ModalViewContainer}>
-        <View style={styles.ModalPriceTextCont}>
-          <View>
-            <Text style={styles.title}>{text.subTotal}</Text>
-            <Text style={styles.title}>{text.ShipingFee}</Text>
+            <View>
+              <Text style={styles.ModalText}>{text.Price1}</Text>
+              <Text style={styles.ModalText}>{text.Price2}</Text>
+            </View>
           </View>
-          <View>
-            <Text style={styles.ModalText}>{text.Price1}</Text>
-            <Text style={styles.ModalText}>{text.Price2}</Text>
+          <View style={styles.ToatalContainer}>
+            <Text style={styles.Totaltext}>{text.Total}</Text>
+            <Text style={styles.Totaltext}>{text.totPrice}</Text>
           </View>
+          <MainButton name={constants.Button.placeYourOrder} />
         </View>
-        <View style={styles.ToatalContainer}>
-          <Text style={styles.Totaltext}>{text.Total}</Text>
-          <Text style={styles.Totaltext}>{text.totPrice}</Text>
-        </View>
-        //shdgfygsukff
-        <MainButton name={constants.Button.placeYourOrder} />
-      </View>
+      </ScrollView>
     </SafeAreaView>
   );
 };

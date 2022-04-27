@@ -1,8 +1,6 @@
-import PassRcvScreen from '../../view/PasswordRecovery';
-import FoodDeatail from '../../view/FoodDetail/index';
 import icons from './icons';
 import constants from './constants';
-import images from './images';
+
 
 const myProfile = {
   name: 'ByProgrammers',
@@ -449,12 +447,12 @@ const DrawerButton = [
   {
     title: 'My Wallet',
     icon: icons.wallet,
-    routeName: 'Home',
+    routeName: 'MyCards',
   },
   {
     title: 'Notification',
     icon: icons.notification,
-    routeName: 'Home',
+    routeName: 'Notification',
   },
   {
     title: 'Favourite',
@@ -464,17 +462,17 @@ const DrawerButton = [
   {
     title: 'Track Your Order',
     icon: icons.location,
-    routeName: 'Home',
+    routeName: 'DeliveryStatus',
   },
   {
     title: 'Coupons',
     icon: icons.coupon,
-    routeName: 'Home',
+    routeName: 'MyCoupon',
   },
   {
     title: 'Setting',
     icon: icons.setting,
-    routeName: 'Home',
+    routeName: 'Settings',
   },
   {
     title: 'invite a Friend',
@@ -497,12 +495,12 @@ const BottomTab = [
   {
     title: 'Search',
     icon: icons.search,
-    routeName: 'Home',
+    routeName: "Home",
   },
   {
     title: 'MyCart',
     icon: icons.cart,
-    routeName: 'Home',
+    routeName: 'MyCart',
   },
   {
     title: 'Favourite',
@@ -512,7 +510,7 @@ const BottomTab = [
   {
     title: 'Notification',
     icon: icons.notification,
-    routeName: 'Home',
+    routeName: 'Notification',
   },
 ];
 const DATA = [

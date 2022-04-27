@@ -35,7 +35,7 @@ const MyCardScreen = (props: InputProp) => {
       <View style={styles.CardContainer}>
         {myCard.map((item, index) => {
           return (
-            <View style={styles.CardViewContainer}>
+            <View style={styles.CardViewContainer} key={index}>
               <View style={styles.ImgTxtContainer}>
                 <View  style={styles.iconView} >
                 <Image source={item.icon} key={index} style={styles.icon} />
@@ -53,7 +53,7 @@ const MyCardScreen = (props: InputProp) => {
           <Text style={styles.txtAddCard}>{constants.screens.AddCard}</Text>
           {allCard.map((item, index) => {
             return (
-              <View style={styles.CardViewContainer}>
+              <View style={styles.CardViewContainer} key={index}>
                 <View style={styles.ImgTxtContainer}>
                   <View style={styles.iconView}>
                     <Image source={item.icon} key={index} style={styles.icon} />

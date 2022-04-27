@@ -27,8 +27,7 @@ const HomeScreenModel = (props: InputProp) => {
     return (
    <View  style={{flex:1,justifyContent:"center",alignItems:"center"}}>
        {IsLoading ? <ActivityIndicator size={40}/> : <HomeScreen navigation={navigation} data={data}
-        IsLoading={IsLoading}
-        />}
+            IsLoading={IsLoading} INCREMENT={undefined}        />}
 
 
    </View> 

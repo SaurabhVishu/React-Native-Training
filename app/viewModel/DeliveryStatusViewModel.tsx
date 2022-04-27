@@ -15,7 +15,7 @@ const DeliveryStatusModel=(props:Inputprop)=>{
     useEffect(() => {
         setTimeout(() => {
           setId((id) => id+1);
-        }, 500);
+        }, 1000*2);
       });
     
     return(

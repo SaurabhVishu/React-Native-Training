@@ -21,6 +21,7 @@ const styles = StyleSheet.create({
     height: 80,
     width: 80,
     resizeMode: 'contain',
+  
   },
   title: {
     ...FONTS.h3,
@@ -65,19 +66,19 @@ const styles = StyleSheet.create({
   mainMapView:{
     marginVertical: 10,
     borderRadius:12,
-    backgroundColor:COLORS.primary
+    backgroundColor:COLORS.primary,
+    justifyContent:"center"
   },
  
-  upperModalView: {
-    flex: 0.8,
-  },
+  
   ModalViewContainer: {
     borderWidth: 2,
     borderRadius: 12,
-    flex: 0.35,
     padding: 15,
+    marginTop:18,
     borderColor: COLORS.lightGray1,
     backgroundColor:COLORS.white,
+    //alignItems:"center"
     
   },
   ModalPriceTextCont: {

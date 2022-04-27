@@ -49,7 +49,7 @@ const screens = {
 const Form = {
     Email: "Email",
     Username:"Username",
-    Uplaceholder:"Enter the Username",
+    UserNameplaceholder:"Enter the Username",
 
     EmailPlaceholder: "Enter the EmailId",
     Password: "Password",

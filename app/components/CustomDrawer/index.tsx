@@ -42,8 +42,7 @@ const CustomDrawerContent = (props: any) => {
                   }
                   activeOpacity={0.2}
                   onPress={() => {
-                    setSelected(index);
-                    // navigation.navigate(item.routeName)
+                    setSelected(index),navigation.navigate(item.routeName)
                   }}>
                   <Image source={item.icon} style={style.mapIcon} />
                   <Text style={style.ButtonName}>{item.title}</Text>

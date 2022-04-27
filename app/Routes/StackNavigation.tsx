@@ -40,7 +40,7 @@ const Stack = createStackNavigator();
 const StackNavigator = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="MapView">
+      <Stack.Navigator initialRouteName="SignUp">
         <Stack.Screen
           name="OnBoarding"
           component={OnBoardingModel}

@@ -38,6 +38,8 @@ export default StyleSheet.create({
   mapIcon: {
     height: 20,
     width: 20,
+    resizeMode:"contain",
+    tintColor:"white"
   },
   LineSeprator: {
     borderBottomWidth: 1,

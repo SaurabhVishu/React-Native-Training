@@ -116,7 +116,7 @@ const Home = (props: InputProp) => {
     <View style={styles.mainContainer}>
       <ScrollView showsVerticalScrollIndicator={false}>
         <Header
-          name={constants.screens.MY_CARD}
+          name={constants.screens.home}
           leftIcon={icons.menu}
           rytIcon={icons.profile}
         />
@@ -165,7 +165,7 @@ const Home = (props: InputProp) => {
                     <View style={styles.caloriesView}>
                       <Image
                         style={styles.caloriesIcon}
-                        source={item.calories}
+                        source={icons.calories}
                       />
                     </View>
                     <View>

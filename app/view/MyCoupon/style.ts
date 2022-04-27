@@ -82,7 +82,7 @@ const styles=StyleSheet.create({
         width: 30,
         backgroundColor: 'white',
         borderRadius:90,
-        right: -20,
+        right: -width*.09,
  
     },
     leftHalfCirce:{
@@ -90,7 +90,7 @@ const styles=StyleSheet.create({
         width: 30,
         backgroundColor: 'white',
         borderRadius: 90,
-        left: -20,
+        left: -width*.05,
       },
       title_CircleContainer:{
         justifyContent: 'space-between', flexDirection: 'row'

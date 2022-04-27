@@ -1,4 +1,4 @@
-import {StyleSheet} from 'react-native';
+import {Dimensions, StyleSheet} from 'react-native';
 import {COLORS, FONTS} from '../../config/constants';
 
 const styles = StyleSheet.create({
@@ -52,6 +52,7 @@ const styles = StyleSheet.create({
   RenderIcon: {
     height: 50,
     width: 50,
+    resizeMode:"contain"
   },
   RenderTitle: {
     ...FONTS.body3,
@@ -78,6 +79,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     padding: 5,
     alignItems: 'center',
+    justifyContent:"center"
   },
   TrueRenderTitle: {
     ...FONTS.body3,
@@ -94,12 +96,8 @@ const styles = StyleSheet.create({
   RendersecondContainer: {
     backgroundColor: COLORS.lightGray2,
     borderRadius: 12,
-    paddingHorizontal: 18,
-    paddingTop: 15,
-    paddingBottom: 5,
-
-
-    //  flexDirection:"row"
+    width:Dimensions.get('window').width*0.5,
+    padding:10,
   },
   uperRenderView: {
     flexDirection: 'row',
@@ -108,14 +106,17 @@ const styles = StyleSheet.create({
   },
   caloriesView: {
     flexDirection: 'row',
+   // backgroundColor:"yellow"
   },
   caloriesIcon: {
-    height: 35,
-    width: 35,
+    height: 30,
+    width: 30,
+    resizeMode:"contain"
   },
   caloriesText: {
     fontSize: 12,
     color: COLORS.darkGray,
+    marginTop:7
   },
   RenImageContainer: {
     alignItems: 'center',
@@ -125,6 +126,8 @@ const styles = StyleSheet.create({
   RenderSecondImage: {
     height: 140,
     width: 120,
+    resizeMode:"contain"
+
   },
   price: {
     color: COLORS.black,
@@ -134,8 +137,9 @@ const styles = StyleSheet.create({
     color: COLORS.darkGray,
   },
   Favourite: {
-    height: 25,
-    width: 25,
+    height: 30,
+    width: 30,
+    resizeMode:'contain'
     // tintColor:"red"
   },
   TrueLove: {
