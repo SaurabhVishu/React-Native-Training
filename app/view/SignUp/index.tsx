@@ -141,7 +141,7 @@ const SignUpScreen = (props: InputProp) => {
                 <Text style={styles.fbBtnTxt}>{constants.Button.FbBtn}</Text>
               </TouchableOpacity>
 
-              <TouchableOpacity style={styles.googleButton} >
+              <TouchableOpacity style={styles.googleButton} onPress={()=>signIn()} >
                 <Image source={icons.google} style={styles.googleIcon}></Image>
                 <Text style={styles.GglBtnTxt}>{constants.Button.GglBtn}</Text>
               </TouchableOpacity>

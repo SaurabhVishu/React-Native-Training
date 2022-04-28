@@ -11,7 +11,7 @@ const signIn = async () => {
     const userInfo = await GoogleSignin.signIn();
     console.log('userinfo', userInfo);
   } catch (error) {
-    console.log(error);
+    console.log("hiii==>",error);
   }
 };
 
