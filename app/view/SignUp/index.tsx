@@ -13,6 +13,8 @@ import {HeaderLogo} from '../../Common';
 import {constants, dummyData, icons} from '../../config/constants';
 import styles from './style';
 import signIn from '../../Common/GoogleSignIn';
+import FacebookLogin from '../../Common/fbLogin';
+ 
 
 interface InputProp {
   navigation: any;
@@ -48,7 +50,7 @@ const SignUpScreen = (props: InputProp) => {
   return (
     <SafeAreaView style={styles.mainConatiner}>
       <ScrollView showsVerticalScrollIndicator={false} style={styles.container}>
-        <View style={{padding: 15}}>
+        <View style={styles.upperView}>
           <View>
             <View style={styles.logo}>
               <HeaderLogo />
@@ -136,7 +138,8 @@ const SignUpScreen = (props: InputProp) => {
           </View>
           <View>
             <View>
-              <TouchableOpacity style={styles.FacebookButton}>
+              <TouchableOpacity style={styles.FacebookButton}
+              onPress={FacebookLogin}>
                 <Image source={icons.fb} style={styles.fbIcon}></Image>
                 <Text style={styles.fbBtnTxt}>{constants.Button.FbBtn}</Text>
               </TouchableOpacity>

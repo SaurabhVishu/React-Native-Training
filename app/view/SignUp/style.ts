@@ -7,9 +7,12 @@ const styles = StyleSheet.create({
   },
   container: {
     flex: 1,
-    // padding: 15,
-    // justifyContent: 'space-between',
+   
   },
+   upperView:{
+     padding:15,
+   },
+
   logo: {
     justifyContent: 'center',
     alignItems: 'center',
