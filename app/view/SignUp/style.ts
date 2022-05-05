@@ -49,7 +49,6 @@ const styles = StyleSheet.create({
   
     width: '100%',
     paddingHorizontal: 10,
-    borderRadius: 10,
   },
   passwordTextInput: {
   

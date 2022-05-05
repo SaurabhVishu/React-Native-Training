@@ -17,16 +17,6 @@ const BottomTab = () => {
         component={HomeModel}
         options={{headerShown: false}}
       />
-      {/* <Tab.Screen
-        name="MyCart"
-        component={MyCartViewModel}
-        options={{headerShown: false}}
-      />
-      <Tab.Screen
-        name="Notification"
-        component={NotificationModel}
-        options={{headerShown: false}}
-      /> */}
       
     </Tab.Navigator>
   );

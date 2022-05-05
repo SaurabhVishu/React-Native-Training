@@ -17,6 +17,10 @@ const styles = StyleSheet.create({
     emailtxt: {
         margin: 5,
     },
+    labelcontainer:{
+ flexDirection:"row",
+ justifyContent:"space-between",
+    },
     Paswd: {
         margin: 5,
     },
@@ -64,10 +68,8 @@ const styles = StyleSheet.create({
         alignItems: "center"
     },
     emailTextInput: {
-        height: 40,
         width: "90%",
-        marginTop: 10,
-        borderRadius: 10,
+        alignSelf:"flex-start"
     },
     Button: {
         // flexDirection: "row",
@@ -83,6 +85,9 @@ const styles = StyleSheet.create({
         fontSize: 18,
         fontWeight: "bold"
     },
+    suggestionText:{
+        color:"red"
+      },
     Signuptext: {
         flexDirection: "row",
         justifyContent: "center",
