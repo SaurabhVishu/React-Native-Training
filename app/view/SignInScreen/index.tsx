@@ -4,7 +4,7 @@ import {
   Switch,
   TextInput,
   TouchableOpacity,
-} from 'react-native-gesture-handler';
+} from 'react-native-gesture-handler'
 import {HeaderLogo} from '../../Common';
 import FacebookLogin from '../../Common/fbLogin';
 import signIn from '../../Common/GoogleSignIn';
