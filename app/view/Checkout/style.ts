@@ -44,7 +44,7 @@ const styles=StyleSheet.create({
         flex:1,
       },
       upperModalView:{
-        flex:0.8,
+        flex:0.78,
       },
       icon: {
         height: 25,

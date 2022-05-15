@@ -123,7 +123,9 @@ const DeliveryStatus = (props: Inputprop) => {
             </TouchableOpacity>
           </View>
         ) : (
-          <MainButton name={constants.Button.Add} />
+          <MainButton name={constants.Button.Add} 
+          Press={()=>navigation.navigate("MapView")}
+          />
         )}
       </View>
     </SafeAreaView>

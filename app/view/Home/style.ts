@@ -7,6 +7,72 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     padding: 15,
   },
+  crossimageconatainer: {
+    borderWidth: .5,
+    borderRadius: 5,
+    padding: 5,
+    borderColor: COLORS.lightGray1
+},
+searchcontainer:{
+  marginBottom:20
+},
+starIcon:{
+  height:25,
+  width:25,
+  resizeMode:"contain",
+  marginHorizontal:8,
+  tintColor:COLORS.gray
+},
+activeStarIcon:{
+  height:25,
+  width:25,
+  resizeMode:"contain",
+  marginHorizontal:8,
+  tintColor:COLORS.primary
+},
+filterButtonText:{
+  color: "white",
+  fontSize: 18,
+  fontWeight: "bold"
+},
+filterButton:{
+  fontSize: 20,
+  backgroundColor: COLORS.primary,
+  padding: 2,
+  borderRadius: 10,
+  paddingVertical: 15,
+  alignItems: "center",
+},
+rateText:{
+  fontSize:16,
+  fontWeight:"300",
+
+},
+
+activeStyle: {
+  backgroundColor: COLORS.primary,
+  borderRadius: 10,
+  width: "30%"
+},
+inactiveStyle: {
+  borderColor: COLORS.gray2,
+  borderWidth: 1,
+  borderRadius: 10,
+  width: "30%",
+  backgroundColor:COLORS.lightGray2,
+},
+activeTextStyle: {
+  color: COLORS.white,
+  fontSize: 16,
+  padding: 10,
+  textAlign: "center"
+},
+inactiveTextStyle: {
+  color: COLORS.gray2,
+  fontSize: 16,
+  padding: 10,
+  textAlign: "center"
+},
   searchIcon: {
     height: 20,
     width: 20,
@@ -37,10 +103,26 @@ const styles = StyleSheet.create({
     height: 20,
     width: 20,
   },
+  modalcross: {
+    height: 25,
+    width: 25,
+    resizeMode: "contain",
+    alignSelf: "center",
+    tintColor: COLORS.lightGray1
+},
   DownArrowContainer: {
     flexDirection: 'row',
     alignItems: 'center',
   },
+  mainsmallcontainer:{
+flex:1,
+  },
+  smallcontainer: {
+    flex: 1,
+    flexDirection: "row",
+    justifyContent: "space-between",
+    marginVertical: 10
+},
   description: {
     ...FONTS.h3,
     color: COLORS.black,
@@ -104,6 +186,12 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
   },
+  customtipsBarStyle: {
+    flex: 1,
+    justifyContent: "space-between",
+    flexDirection: 'row',
+    marginTop: 5,
+},
   caloriesView: {
     flexDirection: 'row',
    // backgroundColor:"yellow"
@@ -137,8 +225,8 @@ const styles = StyleSheet.create({
     color: COLORS.darkGray,
   },
   Favourite: {
-    height: 30,
-    width: 30,
+    height: 25,
+    width: 25,
     resizeMode:'contain'
     // tintColor:"red"
   },
@@ -157,8 +245,64 @@ const styles = StyleSheet.create({
     marginLeft:15
   },
   mapContainer:{
+    
     flexDirection:"row",
+    marginVertical:10,
     
   },
+  modalView: {
+    flex: 1,
+    borderTopStartRadius: 20,
+    borderTopEndRadius: 20,
+    backgroundColor: COLORS.white2,
+    padding: 20,
+    justifyContent: "space-between"
+
+},
+modalTextcontainer: {
+    flexDirection: "row",
+
+    justifyContent: "space-between"
+},
+distancecontainer: {
+    marginVertical: 10
+},
+modalText: {
+    fontSize: 22,
+    color: COLORS.black,
+    fontWeight: "600",
+
+},
+ModalSubText: {
+    fontSize: 18,
+    color: COLORS.black,
+    fontWeight: "bold",
+
+},
+ratingContainer:{
+  //backgroundColor:"yellow",
+  flexDirection:"row",
+  margin:5
+},
+
+ModalTextSeperator: {
+    borderWidth: .5,
+    borderColor: COLORS.gray2,
+    width: "100%",
+    marginVertical: 10
+},
+rateButton:{
+  flexDirection:"row",
+  paddingVertical:10,
+  backgroundColor:COLORS.lightGray2,
+  margin:10,
+  justifyContent:"center",
+  alignItems:"center",
+  borderRadius:9,
+  paddingHorizontal:10,
+  borderWidth:2,
+  borderColor:COLORS.lightGray1
+},
+view: { flex: .3, backgroundColor: "rgba(0,0,0,0.2)" },
 });
 export default styles;

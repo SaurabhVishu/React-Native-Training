@@ -6,10 +6,12 @@ import styles from "./style"
 
 
 
-const Swipeleft =()=>{
+const Swipeleft =({index,onPress}:any)=>{
     return(
         <View style={styles.swipeView}>
-        <TouchableOpacity>
+        <TouchableOpacity 
+        onPress={()=>onPress()}
+        >
           <Image source={icons.delete_icon} style={styles.deleteIcon} />
         </TouchableOpacity>
       </View>

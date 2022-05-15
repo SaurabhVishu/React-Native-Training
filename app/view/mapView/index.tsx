@@ -37,7 +37,9 @@ const MapViewScreen = (props: Inputprop) => {
           longitudeDelta: 0.0421,
         }}></MapView>
       <View style={styles.btnContainer}>
-        <TouchableOpacity style={styles.btn}>
+        <TouchableOpacity style={styles.btn}
+        onPress={()=>navigation.goBack()}
+        >
           <Image source={icons.back} style={styles.headerIcon} />
         </TouchableOpacity>
         <TouchableOpacity

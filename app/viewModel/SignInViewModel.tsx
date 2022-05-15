@@ -12,7 +12,7 @@ interface InputProp {
 const SignInModel = (props: InputProp) => {
     const {navigation} = props;
   const[render,setRender]=useState(false)
-  const [isEnabled, setIsEnabled] = useState(false);
+  const [isEnabled, setIsEnabled] = useState(true);
   const email = useRef('');
   const password = useRef('');
   const isvalidPassword = useRef<any>(undefined);

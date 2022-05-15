@@ -40,7 +40,7 @@ const Stack = createStackNavigator();
 const StackNavigator = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="SignUp">
+      <Stack.Navigator initialRouteName="SignIn">
         <Stack.Screen
           name="OnBoarding"
           component={OnBoardingModel}
@@ -104,7 +104,7 @@ const StackNavigator = () => {
         <Stack.Screen
           name="Home"
           component={HomeModel}
-          // options={{headerShown: false}}
+         options={{headerShown: false}}
         />
         <Stack.Screen
           name="BottomTab"
@@ -132,11 +132,11 @@ const StackNavigator = () => {
           component={ChangePasswordModel}
           options={{headerShown: false}}
         />
-        <Stack.Screen
+        {/* <Stack.Screen
           name="HomeScreen"
           options={{headerShown: false}}
           component={HomeScreen}
-        />
+        /> */}
         <Stack.Screen
           name="Settings"
           options={{headerShown: false}}

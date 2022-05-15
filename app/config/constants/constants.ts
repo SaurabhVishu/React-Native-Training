@@ -89,7 +89,7 @@ const Button = {
     AddCard:"Add Card",
     Map:"Map View",
     Byprogrammer:"ByProgrammers",
-    DeliveryMan:"Delivery Mans"
+    DeliveryMan:"Delivery Mans",
 
 }
 
@@ -217,9 +217,14 @@ const track_order_status = [
     }
 ]
 
+
 const GOOGLE_MAP_API_KEY = ""
 
+
+
+
 export default {
+    
     onboarding_screens,
     screens,
     bottom_tabs,
@@ -231,4 +236,5 @@ export default {
     Form,
     Button,
     DrawerText,
+    
 }

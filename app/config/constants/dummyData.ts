@@ -27,7 +27,7 @@ const categories = [
 ];
 
 const hamburger = {
-  id: 1,
+  id: 0,
   name: 'Hamburger',
   description: 'Chicken patty hamburger',
   categories: [1, 2],
@@ -38,7 +38,7 @@ const hamburger = {
 };
 
 const hotTacos = {
-  id: 2,
+  id: 1,
   name: 'Hot Tacos',
   description: 'Mexican tortilla & tacos',
   categories: [1, 3],
@@ -49,7 +49,7 @@ const hotTacos = {
 };
 
 const vegBiryani = {
-  id: 3,
+  id: 2,
   name: 'Veg Biryani',
   description:
     'A popular spice and vegetables mixed favoured rice dish which is typically prepared by layering the biryani gravy and basmati rice in flat bottom vessel.',
@@ -73,7 +73,7 @@ const wrapSandwich = {
 
 const Foodmenu = [
   {
-    id: 1,
+    id: 0,
     name: 'Hamburger',
     description: 'Chicken patty hamburger',
     price: 15.99,
@@ -86,7 +86,7 @@ const Foodmenu = [
     time: '30 Mins',
   },
   {
-    id: 2,
+    id: 1,
     name: 'Hot Tacos',
     description: 'Mexican tortilla & tacos',
     price: 10.99,
@@ -100,7 +100,7 @@ const Foodmenu = [
   },
 
   {
-    id: 3,
+    id: 2,
     name: 'Veg Biryani',
     description: 'Indian Vegetable Biryani',
 
@@ -111,6 +111,20 @@ const Foodmenu = [
     categories: 3,
     distance: 12,
     rating: 3,
+    time: '30 Mins',
+  },
+  {
+    id: 3,
+    name: 'Veg Biryani',
+    description: 'Indian Vegetable Biryani',
+
+    price: 10.99,
+    calories: 78,
+    isFavourite: true,
+    image: require('../../assets/dummyData/veg_biryani.png'),
+    categories: 3,
+    distance: 2,
+    rating: 2,
     time: '30 Mins',
   },
   {
@@ -156,7 +170,7 @@ const Foodmenu = [
     id: 7,
     name: 'Sandwich',
     description: 'Grilled vegetables sandwich',
-    price: 10.99,
+    price: 8,
     calories: 78,
     isFavourite: true,
     image: require('../../assets/dummyData/wrap_sandwich.png'),
@@ -165,6 +179,164 @@ const Foodmenu = [
     rating: 4,
     time: '30 Mins',
   },
+  {
+    id: 8,
+    name: 'Sandwich',
+    description: 'Grilled vegetables sandwich',
+    price: 9,
+    calories: 78,
+    isFavourite: true,
+    image: require('../../assets/dummyData/wrap_sandwich.png'),
+    categories: 2,
+    distance: 10,
+    rating: 3,
+    time: '30 Mins',
+  },
+  {
+    id: 9,
+    name: 'Sandwich',
+    description: 'Grilled vegetables sandwich',
+    price: 12,
+    calories: 78,
+    isFavourite: true,
+    image: require('../../assets/dummyData/wrap_sandwich.png'),
+    categories: 2,
+    distance: 5,
+    rating: 1,
+    time: '30 Mins',
+  },
+  {
+    id: 10,
+    name: 'Wrap Sandwich',
+    description: 'Grilled vegetables sandwich',
+    price: 15,
+    calories: 78,
+    isFavourite: true,
+    image: require('../../assets/dummyData/wrap_sandwich.png'),
+    categories: 2,
+    distance: 14,
+    rating: 2,
+    time: '30 Mins',
+  },
+  {
+    id: 11,
+    name: 'Hamburger',
+    description: 'Chicken patty hamburger',
+    price: 11,
+    calories: 78,
+    isFavourite: true,
+    image: require('../../assets/dummyData/hamburger.png'),
+    categories: 1,
+    distance: 4,
+    rating: 3,
+    time: '30 Mins',
+  },
+  {
+    id: 12,
+    name: 'Veg Biryani',
+    description: 'Indian Vegetable Biryani',
+
+    price: 10.99,
+    calories: 78,
+    isFavourite: true,
+    image: require('../../assets/dummyData/veg_biryani.png'),
+    categories: 3,
+    distance: 12,
+    rating: 3,
+    time: '30 Mins',
+  },
+  {
+    id: 13,
+    name: 'Veg Biryani',
+    description: 'Indian Vegetable Biryani',
+
+    price: 10.99,
+    calories: 78,
+    isFavourite: true,
+    image: require('../../assets/dummyData/veg_biryani.png'),
+    categories: 3,
+    distance: 2,
+    rating: 4,
+    time: '30 Mins',
+  },
+  {
+    id: 14,
+    name: 'Wrap Sandwich',
+    description: 'Grilled vegetables sandwich',
+    price: 10.99,
+    calories: 78,
+    isFavourite: true,
+    image: require('../../assets/dummyData/wrap_sandwich.png'),
+    categories: 1,
+    distance: 4,
+    rating: 4,
+    time: '20 Mins',
+  },
+  {
+    id: 15,
+    name: 'Fruit mix Sandwich',
+    description: ' vegetables sandwich',
+    price: 10.99,
+    calories: 78,
+    isFavourite: true,
+    image: require('../../assets/dummyData/wrap_sandwich.png'),
+    categories: 2,
+    distance: 3,
+    rating: 2,
+    time: '10 Mins',
+  },
+  {
+    id: 16,
+    name: 'Fruit Sandwich',
+    description: 'vegetables sandwich',
+    price: 10.99,
+    calories: 78,
+    isFavourite: true,
+    image: require('../../assets/dummyData/wrap_sandwich.png'),
+    categories: 2,
+    distance: 4,
+    rating: 4,
+    time: '10 Mins',
+  },
+  {
+    id: 17,
+    name: 'Sandwich',
+    description: 'Grilled vegetables sandwich',
+    price: 8,
+    calories: 78,
+    isFavourite: true,
+    image: require('../../assets/dummyData/wrap_sandwich.png'),
+    categories: 2,
+    distance: 6,
+    rating: 2,
+    time: '30 Mins',
+  },
+  {
+    id: 18,
+    name: 'Sandwich',
+    description: 'Grilled vegetables sandwich',
+    price: 9,
+    calories: 78,
+    isFavourite: true,
+    image: require('../../assets/dummyData/wrap_sandwich.png'),
+    categories: 2,
+    distance: 10,
+    rating: 1,
+    time: '20 Mins',
+  },
+  {
+    id: 19,
+    name: 'Sandwich',
+    description: 'Grilled vegetables sandwich',
+    price: 12,
+    calories: 78,
+    isFavourite: true,
+    image: require('../../assets/dummyData/wrap_sandwich.png'),
+    categories: 2,
+    distance: 8,
+    rating: 1,
+    time: '10 Mins',
+  }
 ];
 
 const menu = [
@@ -369,6 +541,13 @@ const ScreenData = {
     ShowAll: 'Show All',
     calories: '78 Calories',
     Recommended: 'Recommended',
+    filter:"Filter Your Search",
+    distance:"Distance",
+    deliverytime:"Delivery Time",
+    pricingrange:"Pricing Range",
+    rating:"Ratings",
+    tags:"Tags",
+
   },
   RiderRivewScreen: {
     title: 'RIDER REVIEW',
@@ -442,7 +621,7 @@ const DrawerButton = [
   {
     title: 'Home',
     icon: icons.home,
-    routeName: 'Home',
+    routeName: 'Drawer',
   },
   {
     title: 'My Wallet',
@@ -505,12 +684,12 @@ const BottomTab = [
   {
     title: 'Favourite',
     icon: icons.favourite,
-    routeName: 'Home',
+    routeName: 'RiderReview',
   },
   {
     title: 'Notification',
     icon: icons.notification,
-    routeName: 'Notification',
+    routeName: 'TabNotify',
   },
 ];
 const DATA = [
@@ -920,7 +1099,7 @@ const Settings = [
 
 const MyCart = [
   {
-    id: 1,
+    id: 0,
     title: 'Hamburger',
     icon: hamburger.image,
     price: '$15.99',
@@ -929,7 +1108,7 @@ const MyCart = [
     count: 0,
   },
   {
-    id: 2,
+    id: 1,
     title: 'Hot Tacos',
     icon: hotTacos.image,
     price: '$10.99',
@@ -938,7 +1117,7 @@ const MyCart = [
     count: 1,
   },
   {
-    id: 3,
+    id: 2,
     title: 'Veg Biryani',
     icon: vegBiryani.image,
     price: '$10.99',
@@ -1015,8 +1194,110 @@ const MapViewData=[
     time:"88, jln Podungan,Kuching",
     icon:icons.focus
   },
+
 ]
 
+// const menudata= [
+//   {
+//   id: 1,
+//   name: "Hamburger",
+//   description: "Chicken patty hamburger",   
+//   price: 15.99,
+//   calories: 78,
+//   isFavourite: true,
+//  // image: require("../assets/dummyData/hamburger.png"),
+//   categories: 1,
+//   distance:4,
+//   rating:1, 
+//   time: "30 Mins",
+
+
+
+// },
+// {
+//   id: 2,
+//   name: "Hot Tacos",
+//   description: "Mexican tortilla & tacos",
+//   price: 10.99,
+//   calories: 78,
+//   isFavourite: false,
+//   image: require("../assets/dummyData/hot_tacos.png"),
+//   categories: 1,
+//   distance:8,
+//   rating:2, 
+//   time: "10 Mins",
+
+// },
+
+// {
+//   id: 3,
+//   name: "Veg Biryani",
+//   description: "Indian Vegetable Biryani",
+
+//   price: 10.99,
+//   calories: 78,
+//   isFavourite: true,
+//   image: require("../assets/dummyData/veg_biryani.png"),
+//   categories:3,
+//   distance:12,
+//   rating:3, 
+//   time: "30 Mins",
+
+// },
+// {
+//   id: 4,
+//   name: "Wrap Sandwich",
+//   description: "Grilled vegetables sandwich",
+//   price: 10.99,
+//   calories: 78,
+//   isFavourite: true,
+//   image: require("../assets/dummyData/wrap_sandwich.png"),
+//   categories: 1,
+//   distance:14,
+//   rating:3, 
+//   time: "20 Mins",
+
+// },
+// {
+//   id: 5,
+//   name: "Fruit mix Sandwich",
+//   description: " vegetables sandwich",
+//   price: 10.99,
+//   calories: 78,
+//   isFavourite: true,
+//   image: require("../assets/dummyData/wrap_sandwich.png"),
+//   categories:2,
+//   distance:3,
+//   rating:3, 
+//   time: "10 Mins",
+// },
+// {
+//   id: 6,
+//   name: "Fruit Sandwich",
+//   description: "vegetables sandwich",
+//   price: 10.99,
+//   calories: 78,
+//   isFavourite: true,
+//   image: require("../assets/dummyData/wrap_sandwich.png"),
+//   categories:2,
+//   distance:4,
+//   rating:4, 
+//   time: "30 Mins",
+// },
+// {
+//   id: 7,
+//   name: "Sandwich",
+//   description: "Grilled vegetables sandwich",
+//   price: 10.99,
+//   calories: 78,
+//   isFavourite: true,
+//   image: require("../assets/dummyData/wrap_sandwich.png"),
+//   categories:2,
+//   distance:5,
+//   rating:4, 
+//   time: "30 Mins",
+// }
+// ]
 export default {
   vegBiryani,
   hamburger,
@@ -1043,5 +1324,6 @@ export default {
   CouponData,
   ChangePassword,
   MyCart,
-  MapViewData
+  MapViewData,
+  // menudata,
 };

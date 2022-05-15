@@ -108,7 +108,9 @@ const CheckoutScreen = (props: InputProp) => {
               <Text style={styles.Totaltext}>{text.totPrice}</Text>
             </View>
 
-            <MainButton name={constants.Button.placeYourOrder} />
+            <MainButton
+            Press={()=>navigation.navigate("Success")}
+            name={constants.Button.placeYourOrder} />
           </View>
         </Modal>
       </View>

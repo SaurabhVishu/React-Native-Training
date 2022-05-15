@@ -1,4 +1,4 @@
-import {StyleSheet} from 'react-native';
+import { StyleSheet, Dimensions } from 'react-native';
 import {COLORS, FONTS} from '../../config/constants/theme';
 
 const styles = StyleSheet.create({
@@ -7,6 +7,10 @@ const styles = StyleSheet.create({
     backgroundColor: COLORS.white,
     padding: 15,
     //justifyContent:"space-between"
+  },
+  UpperView:{
+    height:Dimensions.get('window').height*0.7,
+    //backgroundColor:"blue",
   },
   renderView: {
     
@@ -17,6 +21,31 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     borderRadius: 12,
   },
+  upperModalView:{
+    height:Dimensions.get('window').height*0.65,
+
+  },
+  // MainModalview:{
+  //   flex:1,
+  // },
+
+  Button: {
+    // flexDirection: "row",
+    fontSize: 20,
+    backgroundColor: COLORS.primary,
+    padding: 2,
+    borderRadius: 10,
+    paddingVertical: 15,
+    alignItems: "center",
+},
+
+
+btnTxt: {
+    color: "white",
+    fontSize: 18,
+    fontWeight: "bold"
+},
+
   image: {
     height: 80,
     width: 80,
@@ -73,12 +102,14 @@ const styles = StyleSheet.create({
   
   ModalViewContainer: {
     borderWidth: 2,
+    flex:3,
     borderRadius: 12,
     padding: 15,
     marginTop:18,
     borderColor: COLORS.lightGray1,
     backgroundColor:COLORS.white,
     //alignItems:"center"
+   // backgroundColor:"red"
     
   },
   ModalPriceTextCont: {

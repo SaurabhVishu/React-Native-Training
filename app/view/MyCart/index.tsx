@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, SafeAreaView, Image, TouchableOpacity} from 'react-native';
+import {View, Text, SafeAreaView, Image, TouchableOpacity, Modal, TouchableWithoutFeedback} from 'react-native';
 import {Header, MainButton} from '../../Common';
 import {constants, icons} from '../../config/constants';
 import Swipeable from 'react-native-gesture-handler/Swipeable';
@@ -45,6 +45,7 @@ interface Inputprop {
     Price2: string;
     Total: string;
     totPrice: string;
+    DeleteItem: any;
   };
   DecrementCount: (count: any, index: number) => void;
   IncrementCount: (count: any, index: number) => void;
@@ -60,7 +61,30 @@ const MyCart = (props: Inputprop) => {
     setModalVisible,
     DecrementCount,
     IncrementCount,
+    DeleteItem,
   } = props;
+
+  const Price=()=>{
+    return(
+      <View style={styles.ModalViewContainer}>
+      <View style={styles.ModalPriceTextCont}>
+        <View>
+          <Text style={styles.title}>{text.subTotal}</Text>
+          <Text style={styles.title}>{text.ShipingFee}</Text>
+        </View>
+        <View>
+          <Text style={styles.ModalText}>{text.Price1}</Text>
+          <Text style={styles.ModalText}>{text.Price2}</Text>
+        </View>
+      </View>
+      <View style={styles.ToatalContainer}>
+        <Text style={styles.Totaltext}>{text.Total}</Text>
+        <Text style={styles.Totaltext}>{text.totPrice}</Text>
+      </View>
+      <MainButton name={constants.Button.placeYourOrder} />
+    </View>
+    )
+  }
 
   return (
     <SafeAreaView style={styles.mainContainer}>
@@ -68,14 +92,21 @@ const MyCart = (props: Inputprop) => {
         name={constants.screens.MY_CART}
         leftIcon={icons.back}
         rytIcon={icons.cart}
+        leftNavigation={() => navigation.goBack()}
       />
       <ScrollView>
-        <View>
+        <View style={styles.UpperView}>
           {data.map((item: any, index: number) => {
             return (
               <View style={styles.mainMapView} key={index}>
                 <Swipeable
-                  renderRightActions={() => <Swipeleft />}
+                  renderRightActions={() => (
+                    <Swipeleft
+                      onPress={() => DeleteItem(index, item)}
+                      index={index}
+                      
+                    />
+                  )}
                   rightThreshold={0.5}>
                   <View style={styles.renderView} key={index}>
                     <Image source={item.icon} style={styles.image} />
@@ -87,28 +118,64 @@ const MyCart = (props: Inputprop) => {
                     <View style={styles.addContainer}>
                       <TouchableOpacity
                         onPress={() => (
-                          DecrementCount(item.count, index),
-                          setModalVisible(true)
+                          DecrementCount(item.count, index)
                         )}>
                         <Image source={item.minus} style={styles.add} />
                       </TouchableOpacity>
                       <Text style={styles.count}>{item.count}</Text>
                       <TouchableOpacity
                         onPress={() => (
-                          IncrementCount(item.count, index),
-                          setModalVisible(true)
+                          IncrementCount(item.count, index)
                         )}>
                         <Image source={item.add} style={styles.add} />
                       </TouchableOpacity>
                     </View>
                   </View>
                 </Swipeable>
+              
+
               </View>
             );
           })}
         </View>
+        <TouchableOpacity style={styles.Button} onPress={()=>setModalVisible(!modalVisible)} >
+            <Text style={styles.btnTxt}>{constants.Button.continue}</Text>
+          </TouchableOpacity>
 
-        <View style={styles.ModalViewContainer}>
+        <Modal
+          animationType="slide"
+          transparent={true}
+          visible={modalVisible}
+          onRequestClose={() => {
+            setModalVisible(!modalVisible);
+          }}>
+          <TouchableWithoutFeedback
+            onPress={() => setModalVisible(!modalVisible)}>
+            <View style={styles.upperModalView}></View>
+          </TouchableWithoutFeedback>
+
+          <View style={styles.ModalViewContainer}>
+            <View style={styles.ModalPriceTextCont}>
+              <View>
+                <Text style={styles.ModalText}>{text.subTotal}</Text>
+                <Text style={styles.ModalText}>{text.ShipingFee}</Text>
+              </View>
+              <View>
+                <Text style={styles.ModalText}>{text.Price1}</Text>
+                <Text style={styles.ModalText}>{text.Price2}</Text>
+              </View>
+            </View>
+            <View style={styles.ToatalContainer}>
+              <Text style={styles.Totaltext}>{text.Total}</Text>
+              <Text style={styles.Totaltext}>{text.totPrice}</Text>
+            </View>
+
+            <MainButton
+            Press={()=>navigation.navigate("Checkout")}
+            name={constants.Button.placeYourOrder} />
+          </View>
+        </Modal>
+        {/* <View style={styles.ModalViewContainer}>
           <View style={styles.ModalPriceTextCont}>
             <View>
               <Text style={styles.title}>{text.subTotal}</Text>
@@ -124,10 +191,14 @@ const MyCart = (props: Inputprop) => {
             <Text style={styles.Totaltext}>{text.totPrice}</Text>
           </View>
           <MainButton name={constants.Button.placeYourOrder} />
-        </View>
+        </View> */}
       </ScrollView>
     </SafeAreaView>
   );
 };
 
 export default MyCart;
+function goBack() {
+  throw new Error('Function not implemented.');
+}
+

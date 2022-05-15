@@ -21,12 +21,31 @@ const MyCartViewModel = (props: InputProp) => {
     tempdata[index] = {...tempdata[index], count: count + 1};
     setData(tempdata);
   };
+  const DeleteItem=(index:any,item:any)=>{
 
+    let filterrow = data.filter(val=> val.id !=item.id )
+
+    setData(filterrow)
+
+    // let temparr = data.splice(index,1)
+    // setData(temparr)
+    // console.log("temparr===>",temparr)
+    //console.log("index is ",filterrow);
+  }
+
+//   const deleteRow = (rowMap: any, rowKey: any) => {
+//     const newData = [...listData];
+//     const prevIndex = listData.findIndex(item => item.id === rowKey);
+//     newData.splice(prevIndex, 1);
+//     setListData(newData);
+   
+// }
   return (
     <MyCart
       {...{
         navigation,
         data,
+        DeleteItem,
         text: dummyData.ScreenData.CheckoutScreen,
         setData,
         modalVisible,

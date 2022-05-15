@@ -3,16 +3,18 @@ import {View,Text,TouchableOpacity,Image} from "react-native"
 import { constants, icons } from "../../config/constants"
 import styles from "./style"
 
-const Header=( props:any)=>{
+const Header=( props:any,navigation: { goBack: any } )=>{
     // console.log(props)
     return(
      <View>
          <View style={styles.headerContainer}>
-                <TouchableOpacity style={styles.headerIconCont} >
+                <TouchableOpacity style={styles.headerIconCont}  onPress={props.leftNavigation}>
                     <Image source={props.leftIcon} style={styles.headerIcon} />
                 </TouchableOpacity>
                 <Text style={styles.headerText} >{props.name}</Text>
-                <TouchableOpacity style={props.rytIcon==undefined? null:styles.headerIconCont}>
+                <TouchableOpacity style={props.rytIcon==undefined? null:styles.headerIconCont}
+                onPress={props.rightNavigation}
+                >
                     <Image source={props.rytIcon} 
                      style={styles.headerIcon} />
                 </TouchableOpacity>
