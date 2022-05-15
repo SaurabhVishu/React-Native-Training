@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import {View } from "react-native"
 import { constants, dummyData } from "../config/constants"
 import OtpScreen from "../view/OTPScreen"
@@ -14,6 +14,7 @@ interface InputProp {
 
 const OtpModel = (props: InputProp) => {
     const { navigation } = props
+    
     return (
 
         <OtpScreen

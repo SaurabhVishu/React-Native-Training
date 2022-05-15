@@ -45,7 +45,9 @@ const OtpScreen = (props: InputProp) => {
             </View>
                 <View>
                     <TouchableOpacity
-                        style={styles.Button}>
+                        style={styles.Button}
+                        onPress={()=>navigation.navigate("Home")}
+                        >
                         <Text style={styles.continue}>{constantButtonData.continue}</Text>
                     </TouchableOpacity>
                     <Text style={styles.SignMsg}>{data.SignMsg}</Text>
