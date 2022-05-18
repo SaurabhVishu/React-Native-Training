@@ -91,7 +91,7 @@ const BottomTab = () => {
     screenOptions={{tabBarHideOnKeyboard:true,headerShown: false}}
     >
         <Tab.Navigator
-        screenOptions={{
+         screenOptions={{
           headerShown: false,
           tabBarStyle: styles.tabContainer,
         }}>

@@ -27,7 +27,6 @@ import {
 } from '../viewModel';
 import CustomDrawerContent from '../components/CustomDrawer';
 import DrawerNavigation from './DrawerNavigation';
-import BottomTab from './BottomTab';
 import HomeScreen from '../view/homescreen/homescreen';
 
 type RootStackList = {
@@ -105,11 +104,6 @@ const StackNavigator = () => {
           name="Home"
           component={HomeModel}
          options={{headerShown: false}}
-        />
-        <Stack.Screen
-          name="BottomTab"
-          component={BottomTab}
-          options={{headerShown: false}}
         />
         <Stack.Screen
           name="RiderReview"

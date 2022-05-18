@@ -4,6 +4,7 @@ import CustomDrawerContent from '../components/CustomDrawer';
 import SuccessModel from '../viewModel/SuccessViewModel';
 import HomeModel from '../viewModel/homeViewModel';
 import BottomTab from './BottomTab';
+import Roottab from './tabNavigation/Roottab';
 
 const Drawer = createDrawerNavigator();
 
@@ -12,7 +13,7 @@ const Drawer = createDrawerNavigator();
     return (
         <Drawer.Navigator drawerContent={(props) =>
          <CustomDrawerContent {...props} />}>
-         <Drawer.Screen  name="BottomTab"  component={BottomTab}
+         <Drawer.Screen  name="BottomTab"  component={Roottab}
          options={{headerShown: false}}
          />
       </Drawer.Navigator>
