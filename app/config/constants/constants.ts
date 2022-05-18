@@ -1,7 +1,7 @@
 const onboarding_screens = [
     {
         id: 1,
-        backgroundImage: require("../../assets/images/background_01.png"),
+        backgroundImage: require("../../assets/images/background_02.png"),
         bannerImage: require("../../assets/images/favourite_food.png"),
         title: "Choose a Favourite Food",
         description: "When you oder Eat Steet, we’ll hook you up with exclusive coupon, specials and rewards"
@@ -15,7 +15,7 @@ const onboarding_screens = [
     },
     {
         id: 3,
-        backgroundImage: require("../../assets/images/background_01.png"),
+        backgroundImage: require("../../assets/images/background_02.png"),
         bannerImage: require("../../assets/images/great_food.png"),
         title: "Receive the Great Food",
         description: "You’ll receive the great food within a hour. And get free delivery credits for every order."
@@ -88,8 +88,11 @@ const Button = {
     ChangePassword:"Change password",
     AddCard:"Add Card",
     Map:"Map View",
+    skip:"Skip",
     Byprogrammer:"ByProgrammers",
     DeliveryMan:"Delivery Mans",
+    next:"Next",
+    letsGetStarted:"Let's Get Started"
 
 }
 

@@ -28,6 +28,7 @@ const MyCoupon = (props: InputProp) => {
         name={constants.screens.Mycoupon}
         leftIcon={icons.back}
         rytIcon={icons.profile}
+        leftNavigation={()=>navigation.goBack()} 
       />
       <View style={styles.btnContainer}>
         <TouchableOpacity

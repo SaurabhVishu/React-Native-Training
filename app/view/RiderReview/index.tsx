@@ -29,6 +29,8 @@ const RiderReview = (props: InputProp) => {
         name={constants.screens.RIDERRIVIEW}
         leftIcon={icons.back}
         rytIcon={undefined}
+        leftNavigation={()=>navigation.goBack()} 
+
       />
       <View style={styles.imageContainer}>
         <Image source={images.profile} style={styles.RiderImage} />
@@ -74,6 +76,7 @@ const RiderReview = (props: InputProp) => {
       <View style={styles.SubmitBtn}>
       <MainButton
       name={constants.Button.SubmitReview}
+      Press={()=>navigation.navigate("Drawer")}
       />
       </View>
     </View>

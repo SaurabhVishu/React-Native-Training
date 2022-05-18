@@ -24,6 +24,7 @@ const SuccessScreen = (props: InputProp) => {
       <View style={styles.LowerView}></View>
             <MainButton
             name={constants.Button.Done}
+            Press={()=>navigation.navigate("Drawer")}
             />
     </View>
   );

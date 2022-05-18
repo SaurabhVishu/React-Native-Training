@@ -3,11 +3,11 @@ import { COLORS, FONTS } from "../../config/constants";
 
 const styles=StyleSheet.create({
     mainContainer:{
-        backgroundColor:COLORS.white,
-        flexDirection:"row",
-         padding:5,
+         backgroundColor:COLORS.white,
+          flexDirection:"row",
+          padding:5,
         justifyContent:"space-between",
-        alignItems:"center"
+         alignItems:"center"
         
 
     },

@@ -27,7 +27,7 @@ const AddNewCard = (props: Inputprop) => {
         name={constants.screens.addNewCard}
         leftIcon={icons.back}
         rytIcon={undefined}
-      />
+        leftNavigation={()=>navigation.goBack()}      />
       <View style={styles.spaceView}>
         <View>
           <View style={styles.card}>
@@ -90,7 +90,9 @@ const AddNewCard = (props: Inputprop) => {
             <Text style={styles.label}>{data.RememberThisCardDetail}</Text>
           </View>
         </View>
-        <MainButton name={constants.Button.AddCard} />
+        <MainButton name={constants.Button.AddCard}
+        Press={()=>navigation.navigate("Success")}
+        />
       </View>
     </View>
   );

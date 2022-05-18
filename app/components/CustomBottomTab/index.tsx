@@ -1,11 +1,12 @@
+import { BottomTabBar, BottomTabBarProps } from '@react-navigation/bottom-tabs';
 import React, {useState} from 'react';
 import {Text, TouchableOpacity, View, Image} from 'react-native';
 import {dummyData, icons} from '../../config/constants';
 import styles from './style';
 
-const MyTabBar = (props: any) => {
-  const {navigation} = props;
-
+const MyTabBar = ( props: BottomTabBarProps) => {
+  const {navigation,state} = props;
+console.log(props)
   const [selected, setSelected] = useState(0);
   return (
     <View style={styles.mainContainer}>
@@ -29,6 +30,7 @@ const MyTabBar = (props: any) => {
           </TouchableOpacity>
         );
       })}
+      {/* <BottomTabBar {...props} /> */}
     </View>
   );
 };

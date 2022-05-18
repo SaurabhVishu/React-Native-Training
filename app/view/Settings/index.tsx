@@ -21,6 +21,7 @@ const SettingsScreen = (props: Inputprop) => {
           name={constants.screens.Settings}
           leftIcon={icons.back}
           rytIcon={undefined}
+          leftNavigation={()=>navigation.goBack()} 
         />
         <View style={styles.mapContainer}>
             {data.map((item,index)=>{

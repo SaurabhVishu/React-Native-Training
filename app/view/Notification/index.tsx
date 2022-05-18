@@ -23,6 +23,7 @@ const NotificationScreen = (props: InputProp) => {
         name={constants.screens.notifi}
         leftIcon={icons.back}
         rytIcon={undefined}
+        leftNavigation={()=>navigation.goBack()} 
       />
       <View style={styles.CardCont}>
           <Image source={icons.notification} style={styles.notificationIcon} />

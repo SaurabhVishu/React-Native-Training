@@ -41,6 +41,7 @@ const Notification2Screen = (props: InputProp) => {
         name={constants.screens.notifi}
         leftIcon={icons.back}
         rytIcon={icons.profile}
+        leftNavigation={()=>navigation.goBack()} 
       />
 
       <RenderItem />

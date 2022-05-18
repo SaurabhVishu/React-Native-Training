@@ -5,14 +5,17 @@ import { SIZES } from "../../config/constants";
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        padding: 15,
+        padding: 20,
         justifyContent: "space-between",
         //    justifyContent:"center",
         //    alignItems:"center",
         backgroundColor: "white"
     },
     inputContainer: {
-        marginVertical: 10,
+        // marginVertical: 10,
+    },
+    inputMaincontainer:{
+        marginVertical:10
     },
     emailtxt: {
         margin: 5,
@@ -27,6 +30,7 @@ const styles = StyleSheet.create({
     eyeIcon: {
         height: 25,
         width: 25,
+
     },
     TogleBtnCont: {
         flexDirection: "row",
@@ -48,7 +52,7 @@ const styles = StyleSheet.create({
     },
     Heading: {
         textAlign: "center",
-        fontSize: 25,
+        fontSize: 22,
         color: COLORS.black,
         fontWeight: "bold",
         marginTop: 20,
@@ -56,8 +60,8 @@ const styles = StyleSheet.create({
     },
     subhead: {
         textAlign: "center",
-        marginTop: 10,
-        fontSize: 20,
+        marginBottom: 10,
+        fontSize: 17,
         color: COLORS.darkGray
     },
     textinputcont: {
@@ -68,7 +72,7 @@ const styles = StyleSheet.create({
         alignItems: "center"
     },
     emailTextInput: {
-        width: "90%",
+        width: "85%",
         alignSelf:"flex-start"
     },
     Button: {
@@ -77,7 +81,7 @@ const styles = StyleSheet.create({
         backgroundColor: COLORS.primary,
         padding: 2,
         borderRadius: 10,
-        paddingVertical: 15,
+        paddingVertical: 10,
         alignItems: "center",
     },
     signinTxt: {
@@ -86,6 +90,7 @@ const styles = StyleSheet.create({
         fontWeight: "bold"
     },
     suggestionText:{
+        margin:5,
         color:"red"
       },
     Signuptext: {
@@ -95,8 +100,9 @@ const styles = StyleSheet.create({
     },
     donthaveAc: {
         textAlign: "center",
-        fontSize: 20,
-        color: "black"
+        fontSize: 16,
+        color: "black",
+        marginTop:5
     },
     txt1: {
         fontSize: 10,
@@ -104,8 +110,10 @@ const styles = StyleSheet.create({
     },
     SignUpBtn: {
         textAlign: "center",
-        fontSize: 18,
-        color: "orange"
+        fontSize: 16,
+        color: "orange",
+        marginTop:5,
+        marginLeft:5
     },
 
 
@@ -114,7 +122,7 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         fontSize: 30,
         backgroundColor: COLORS.blue,
-        padding: 15,
+        padding: 10,
         borderRadius: 10,
         alignItems: "center",
         marginVertical: 5,
@@ -126,7 +134,7 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         fontSize: 30,
         backgroundColor: COLORS.gray3,
-        padding: 15,
+        padding: 10,
         borderRadius: 10,
         alignItems: "center",
         marginVertical: 5
@@ -141,7 +149,7 @@ const styles = StyleSheet.create({
         color: "white",
         fontSize: 15,
         marginLeft: 10,
-        fontWeight: "bold"
+        fontWeight: "600"
     },
     GglIcon: {
         height: 25,
@@ -153,7 +161,7 @@ const styles = StyleSheet.create({
         color: "black",
         fontSize: 15,
         marginLeft: 10,
-        fontWeight: "bold"
+        fontWeight: "600"
     },
 
 })

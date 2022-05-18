@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {View, Text, Image,ScrollView,TouchableOpacity} from 'react-native';
 import Header from '../../Common/Header';
 import {constants, icons} from '../../config/constants';
@@ -23,15 +23,18 @@ allCard: {
 
 const MyCardScreen = (props: InputProp) => {
   const {navigation,myCard,allCard} = props;
+  const[selected,setSelected]=useState(0)
+  console.log("selected is ===>",selected)
   return (
     <View style={styles.Container}>
       <Header
         name={constants.screens.MY_CARD}
         leftIcon={icons.back}
         rytIcon={undefined}
+        leftNavigation={()=>navigation.goBack()}  
       />
 
-      <ScrollView>
+      <ScrollView  showsVerticalScrollIndicator={false}>
       <View style={styles.CardContainer}>
         {myCard.map((item, index) => {
           return (
@@ -42,9 +45,10 @@ const MyCardScreen = (props: InputProp) => {
                 </View>
                 <Text style={styles.iconName}>{item.name}</Text>
               </View>
-              <View>
-                <Image source={icons.check_off} style={styles.checkoff} />
-              </View>
+              
+                <TouchableOpacity onPress={()=>setSelected(index)}>
+                <Image source={icons.check_off} style={selected==index?[styles.checkoff,{tintColor:"orange"}]:styles.checkoff} />
+                </TouchableOpacity>
             </View>
           );
         })}
@@ -72,8 +76,13 @@ const MyCardScreen = (props: InputProp) => {
       </ScrollView>
       <MainButton 
       name={constants.Button.Add}
+      Press={()=>navigation.navigate("AddNewCard")}
       />
     </View>
   );
 };
 export default MyCardScreen;
+function id(id: any): void {
+  throw new Error('Function not implemented.');
+}
+

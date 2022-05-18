@@ -27,7 +27,7 @@ const HomeModel = (props: InputProp) => {
   const {navigation} = props;
   let data2 = dummyData.Foodmenu.filter(a => selected == a.categories);
   //console.log(data2)
-  console.log('value of', selected);
+  //console.log('value of', selected);
   const [modalVisible, setModalVisible] = useState(false);
   const [distance, setdistance] = useState([]);
   const [price, setprice] = useState([]);
@@ -46,7 +46,7 @@ const HomeModel = (props: InputProp) => {
   const SearchData = dummyData.Foodmenu.filter((data: menudata) =>
     data.name.toLowerCase().match(searchText.toLowerCase()),
   ).map((data: any) => data);
-  console.log(searchText, SearchData);
+ // console.log(searchText, SearchData);
   if (defaultRating != 0) {
     menudata = menudata.filter((a: menudata) => a.rating == defaultRating);
   }

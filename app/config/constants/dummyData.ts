@@ -1,5 +1,6 @@
 import icons from './icons';
 import constants from './constants';
+import HomeModel from '../../viewModel/homeViewModel';
 
 
 const myProfile = {
@@ -665,33 +666,7 @@ const DrawerButton = [
   },
 ];
 
-const BottomTab = [
-  {
-    title: 'Home',
-    icon: icons.home,
-    routeName: 'Home',
-  },
-  {
-    title: 'Search',
-    icon: icons.search,
-    routeName: "Home",
-  },
-  {
-    title: 'MyCart',
-    icon: icons.cart,
-    routeName: 'MyCart',
-  },
-  {
-    title: 'Favourite',
-    icon: icons.favourite,
-    routeName: 'RiderReview',
-  },
-  {
-    title: 'Notification',
-    icon: icons.notification,
-    routeName: 'TabNotify',
-  },
-];
+
 const DATA = [
   {
     title: 'Today',
@@ -1319,7 +1294,7 @@ export default {
   DATA,
   DrawerButton,
   Foodmenu,
-  BottomTab,
+  
   TipsData,
   CouponData,
   ChangePassword,

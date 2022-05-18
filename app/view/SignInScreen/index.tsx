@@ -4,11 +4,11 @@ import {
   Switch,
   TextInput,
   TouchableOpacity,
-} from 'react-native-gesture-handler'
+} from 'react-native-gesture-handler';
 import {HeaderLogo} from '../../Common';
 import FacebookLogin from '../../Common/fbLogin';
 import signIn from '../../Common/GoogleSignIn';
-import {constants, dummyData, icons} from '../../config/constants';
+import {COLORS, constants, dummyData, icons} from '../../config/constants';
 import styles from './style';
 
 interface InputProp {
@@ -26,7 +26,8 @@ interface InputProp {
 }
 
 const SignInScreen = (props: InputProp) => {
-    const toggleSwitch = () => setIsEnabled((previousState: any) => !previousState);
+  const toggleSwitch = () =>
+    setIsEnabled((previousState: any) => !previousState);
   const {
     navigation,
     isValidEmail,
@@ -98,21 +99,25 @@ const SignInScreen = (props: InputProp) => {
           <View style={styles.TogleBtnCont}>
             <View style={styles.switchBtn}>
               <Switch
-                trackColor={{false: '#767577', true: '#81b0ff'}}
-                thumbColor={isEnabled ? '#f5dd4b' : '#f4f3f4'}
+                trackColor={{false: COLORS.primary, true: COLORS.lightGray2}}
+                thumbColor={isEnabled ? COLORS.primary : COLORS.lightGray2}
                 onValueChange={toggleSwitch}
                 value={isEnabled}
               />
               <Text>{constants.Form.SaveMe}</Text>
             </View>
             <View style={styles.fgtBtn}>
-              <TouchableOpacity  onPress={() => navigation.navigate('Otp')}>
+              <TouchableOpacity onPress={() => navigation.navigate('Otp')}>
                 <Text>{constants.Button.ForgetPassword}</Text>
               </TouchableOpacity>
             </View>
           </View>
 
-          <TouchableOpacity style={styles.Button} onPress={() => (Submit(), render ? setRender(false) : setRender(true))}>
+          <TouchableOpacity
+            style={styles.Button}
+            onPress={() => (
+              Submit(), render ? setRender(false) : setRender(true)
+            )}>
             <Text style={styles.signinTxt}>{constants.Button.Sign}</Text>
           </TouchableOpacity>
 
