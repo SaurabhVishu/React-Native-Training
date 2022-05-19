@@ -27,6 +27,7 @@ interface InputProp {
   Submit: any;
   setRender: any;
   render:any;
+  isvalidusername:any
   isValidEmail: React.MutableRefObject<boolean>;
   isvalidPassword: React.MutableRefObject<boolean>;
 }
@@ -44,7 +45,8 @@ const SignUpScreen = (props: InputProp) => {
     setPassword,
     isvalidPassword,
     setRender,
-    render
+    render,
+    isvalidusername
   } = props;
 
   return (
@@ -82,7 +84,13 @@ const SignUpScreen = (props: InputProp) => {
             <View style={styles.inputContainer}>
               <View style={styles.labelContainer}>
                 <Text style={styles.emailtxt}>{constants.Form.Username}</Text>
+                {isvalidusername.current == false && (
+                  <Text style={styles.suggestionText}>
+                    Invalid UserName
+                  </Text>
+                )}
               </View>
+
               <View style={styles.textinputcont}>
                 <TextInput
                   placeholder={constants.Form.UserNameplaceholder}
@@ -115,7 +123,7 @@ const SignUpScreen = (props: InputProp) => {
                   onPress={() => {
                     isEnabled ? setIsEnabled(false) : setIsEnabled(true);
                   }}>
-                  <Image source={icons.eye} style={styles.eyeIcon} />
+                  <Image source={setIsEnabled? icons.eye_close:icons.eye} style={styles.eyeIcon} />
                 </TouchableOpacity>
               </View>
             </View>

@@ -20,9 +20,12 @@ interface InputProp {
   setPassword: any;
   Submit: any;
   setRender: any;
+  setUserName:any
   render: any;
+  isEnabledBtn:any
   isValidEmail: React.MutableRefObject<boolean>;
   isvalidPassword: React.MutableRefObject<boolean>;
+  setIsEnabledBtn:any
 }
 
 const SignInScreen = (props: InputProp) => {
@@ -40,6 +43,9 @@ const SignInScreen = (props: InputProp) => {
     setRender,
     render,
     Submit,
+    setIsEnabledBtn,
+    isEnabledBtn,
+    setUserName
   } = props;
   return (
     <View style={styles.container}>
@@ -92,18 +98,20 @@ const SignInScreen = (props: InputProp) => {
                 onPress={() => {
                   isEnabled ? setIsEnabled(false) : setIsEnabled(true);
                 }}>
-                <Image source={icons.eye} style={styles.eyeIcon} />
+                <Image source={isEnabled==true? icons.eye_close:icons.eye} style={styles.eyeIcon} />
               </TouchableOpacity>
             </View>
           </View>
           <View style={styles.TogleBtnCont}>
             <View style={styles.switchBtn}>
+              <TouchableOpacity onPress={()=>setIsEnabledBtn(!true)}>
               <Switch
                 trackColor={{false: COLORS.primary, true: COLORS.lightGray2}}
-                thumbColor={isEnabled ? COLORS.primary : COLORS.lightGray2}
+                thumbColor={isEnabledBtn ? COLORS.primary : COLORS.lightGray2}
                 onValueChange={toggleSwitch}
-                value={isEnabled}
+                value={isEnabledBtn}
               />
+              </TouchableOpacity>
               <Text>{constants.Form.SaveMe}</Text>
             </View>
             <View style={styles.fgtBtn}>

@@ -30,6 +30,7 @@ const styles = StyleSheet.create({
     eyeIcon: {
         height: 25,
         width: 25,
+        tintColor:COLORS.gray
 
     },
     TogleBtnCont: {

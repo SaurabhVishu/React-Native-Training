@@ -6,6 +6,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 15,
+    backgroundColor:COLORS.white
   },
   RenImageContainer: {
     padding: 10,
@@ -27,7 +28,7 @@ const styles = StyleSheet.create({
   RenItem: {
     padding: 10,
     flexDirection: 'row',
-    backgroundColor: COLORS.gray2,
+    backgroundColor: COLORS.lightGray1,
     borderRadius: 12,
     alignItems: 'flex-start',
     marginVertical: 10,

@@ -37,10 +37,10 @@ const RenderItem = (props: RenderItemProp) => {
                     <View style={{marginVertical:20}}><HeaderLogo/></View>
                     <Image style={styles.bannerImage} source={item.bannerImage} />
                 </View>
-          
+          <View style={{bottom:30}}>
             <Text style={styles.title}>{item.title}</Text>
             <Text style={styles.description}>{item.description}</Text> 
-
+            </View>
 
 
             <View style={{marginTop:20}} >

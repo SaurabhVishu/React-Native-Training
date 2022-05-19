@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import {
   View,
   Text,
@@ -13,6 +13,7 @@ import Header from '../../Common/Header';
 import {constants, icons} from '../../config/constants';
 import { Mycard, Textdata } from '../../Models';
 import styles from './style';
+import { COLORS } from '../../config/constants/theme';
 
 interface InputProp {
   navigation: any,
@@ -30,6 +31,7 @@ interface InputProp {
 
 const CheckoutScreen = (props: InputProp) => {
   const {navigation, myCard, text,modalVisible,setModalVisible} = props;
+  const[data,setData]=useState(0)
   
   return (
     <View style={styles.mainContainer}>
@@ -37,24 +39,27 @@ const CheckoutScreen = (props: InputProp) => {
         name={constants.screens.Checkout}
         leftIcon={icons.back}
         rytIcon={undefined}
+        leftNavigation={() => navigation.goBack()}
+
       />
 
       {myCard.map((item, index) => {
         return (
-          <TouchableOpacity onPress={() => setModalVisible(true)} key={index}>
-            <View style={styles.CardViewContainer}>
+          <TouchableOpacity onPress={() => {setModalVisible(true),setData(index)}} key={index} >
+            <View style={index==data?[styles.CardViewContainer,{borderColor:COLORS.primary}]:styles.CardViewContainer}>
               <View style={styles.ImgTxtContainer}>
                 <View style={styles.iconView}>
-                  <Image source={item.icon} key={index} style={styles.icon} />
+                  <Image source={ item.icon} key={index} style={styles.icon} />
                 </View>
                 <Text style={styles.iconName}>{item.name}</Text>
               </View>
-
+                <TouchableOpacity>
               <Image
-                source={icons.check_off}
+                source={index==data ? icons.check_on:icons.check_off}
                 style={styles.checkoff}
                 key={index}
               />
+              </TouchableOpacity>
             </View>
           </TouchableOpacity>
         );

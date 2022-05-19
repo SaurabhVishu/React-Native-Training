@@ -1,4 +1,4 @@
-import { StyleSheet } from "react-native";  
+import { StyleSheet, Dimensions } from 'react-native';  
 import { COLORS, FONTS } from "../../config/constants";
 
 const styles=StyleSheet.create({
@@ -91,7 +91,10 @@ const styles=StyleSheet.create({
         backgroundColor:COLORS.lightGray1,
         marginVertical:15,
         borderRadius:12,
-        flex:1
+        flex:1,
+        //justifyContent:"flex-start"
+        alignItems:"flex-start",
+        height:200
         
         
     },

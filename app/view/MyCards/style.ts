@@ -6,6 +6,7 @@ const styles = StyleSheet.create({
   Container: {
     flex: 1,
     padding: 15,
+    backgroundColor:COLORS.white
   },
   CardContainer: {},
   icon: {
@@ -23,7 +24,7 @@ const styles = StyleSheet.create({
     // tintColor: 'red',
   },
   CardViewContainer: {
-    backgroundColor: COLORS.lightGray2,
+    backgroundColor: COLORS.white,
     marginVertical: 10,
     flexDirection: 'row',
     justifyContent: 'space-between',

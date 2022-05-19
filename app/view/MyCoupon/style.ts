@@ -1,7 +1,7 @@
 import { StyleSheet, Dimensions} from "react-native";
 import { color } from "react-native-reanimated";
 import { COLORS, FONTS } from '../../config/constants/theme';
-let {height,width}=Dimensions.get('window')
+let {height,width}=Dimensions.get('screen')
 const styles=StyleSheet.create({
     mainContainer:{
         flex:1,
@@ -17,7 +17,7 @@ const styles=StyleSheet.create({
         backgroundColor:COLORS.lightOrange3,
          padding:5,
         borderRadius:12,
-        width:width*0.48,
+        width:width*0.45,
         alignItems:"center",
         justifyContent:"center"
     },
@@ -30,7 +30,7 @@ const styles=StyleSheet.create({
     },
     usedBtn:{
         backgroundColor:COLORS.lightOrange3,
-         width:160,
+         width:width*0.45,
          borderRadius:12,
          justifyContent:"center",
          alignItems:"center"
@@ -82,7 +82,8 @@ const styles=StyleSheet.create({
         width: 30,
         backgroundColor: 'white',
         borderRadius:90,
-        right: -width*.09,
+       
+        right: -width*.11,
  
     },
     leftHalfCirce:{

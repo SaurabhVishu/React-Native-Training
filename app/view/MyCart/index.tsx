@@ -1,11 +1,11 @@
 import React from 'react';
-import {View, Text, SafeAreaView, Image, TouchableOpacity, Modal, TouchableWithoutFeedback} from 'react-native';
+import {View, Text, SafeAreaView, Image, TouchableOpacity, Modal, TouchableWithoutFeedback, ScrollView} from 'react-native';
+import { Swipeable } from 'react-native-gesture-handler';
 import {Header, MainButton} from '../../Common';
 import {constants, icons} from '../../config/constants';
-import Swipeable from 'react-native-gesture-handler/Swipeable';
 import styles from './style';
 import Swipeleft from './Swipeleft';
-import {ScrollView} from 'react-native-gesture-handler';
+
 
 interface Inputprop {
   navigation: any;
@@ -49,6 +49,7 @@ interface Inputprop {
   };
   DecrementCount: (count: any, index: number) => void;
   IncrementCount: (count: any, index: number) => void;
+  DeleteItem: (index: any, item: any) => void
 }
 
 const MyCart = (props: Inputprop) => {

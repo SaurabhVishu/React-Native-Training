@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import {View, Text, Image,ScrollView,TouchableOpacity} from 'react-native';
 import Header from '../../Common/Header';
-import {constants, icons} from '../../config/constants';
+import {COLORS, constants, icons} from '../../config/constants';
 import styles from './style';
 import MainButton from '../../Common/MainButton';
 
@@ -38,7 +38,7 @@ const MyCardScreen = (props: InputProp) => {
       <View style={styles.CardContainer}>
         {myCard.map((item, index) => {
           return (
-            <View style={styles.CardViewContainer} key={index}>
+            <View style={selected==index? [styles.CardViewContainer,{borderColor:COLORS.primary}]:styles.CardViewContainer} key={index}>
               <View style={styles.ImgTxtContainer}>
                 <View  style={styles.iconView} >
                 <Image source={item.icon} key={index} style={styles.icon} />
@@ -47,7 +47,7 @@ const MyCardScreen = (props: InputProp) => {
               </View>
               
                 <TouchableOpacity onPress={()=>setSelected(index)}>
-                <Image source={icons.check_off} style={selected==index?[styles.checkoff,{tintColor:"orange"}]:styles.checkoff} />
+                <Image source={selected==index?icons.check_on:icons.check_off} style={selected==index?[styles.checkoff,{tintColor:COLORS.primary}]:styles.checkoff} />
                 </TouchableOpacity>
             </View>
           );

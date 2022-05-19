@@ -1,5 +1,6 @@
 import React from 'react';
 import {View, Text, Image, TouchableOpacity,TextInput} from 'react-native';
+import { ScrollView } from 'react-native-gesture-handler';
 import { MainButton } from '../../Common';
 import Header from '../../Common/Header';
 import {COLORS, constants, dummyData, icons, images} from '../../config/constants';
@@ -32,6 +33,7 @@ const RiderReview = (props: InputProp) => {
         leftNavigation={()=>navigation.goBack()} 
 
       />
+      <ScrollView showsVerticalScrollIndicator={false}>
       <View style={styles.imageContainer}>
         <Image source={images.profile} style={styles.RiderImage} />
       </View>
@@ -59,11 +61,13 @@ const RiderReview = (props: InputProp) => {
       <View style={styles.TipContainer}>
         {dummyData.TipsData.map((item, index) => {
           return (
+            <ScrollView showsHorizontalScrollIndicator={false} key={index}>
             <TouchableOpacity  onPress={()=>setSelected(index)} key={index}>
                 <View style={selected==index?styles.Truetipdata: styles.tipdata}>
               <Text style={ selected==index ? [styles.tiptext,{color:'white'}]:styles.tiptext}>{item.title}</Text>
               </View>
             </TouchableOpacity>
+            </ScrollView>
           );
         })}
       </View>
@@ -71,12 +75,14 @@ const RiderReview = (props: InputProp) => {
           <TextInput
           placeholder='Add a comment'
           placeholderTextColor={"gray"}
+           style={{width:"90%"}}
            />
       </View>
+      </ScrollView>
       <View style={styles.SubmitBtn}>
       <MainButton
       name={constants.Button.SubmitReview}
-      Press={()=>navigation.navigate("Drawer")}
+      Press={()=>navigation.navigate('HomeTab')}
       />
       </View>
     </View>

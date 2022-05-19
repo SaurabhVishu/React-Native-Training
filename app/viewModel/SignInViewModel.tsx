@@ -11,12 +11,15 @@ interface InputProp {
 
 const SignInModel = (props: InputProp) => {
     const {navigation} = props;
+    const[isEnabledBtn,setIsEnabledBtn]=useState(true)
   const[render,setRender]=useState(false)
   const [isEnabled, setIsEnabled] = useState(true);
   const email = useRef('');
   const password = useRef('');
+  const username=useRef('');
   const isvalidPassword = useRef<any>(undefined);
   const isValidEmail = useRef<any>(undefined);
+  const isValidUserName=useRef<any>(undefined);
 
   const Submit = () => {
     isValidEmail.current = EmailValidate(email.current);
@@ -39,11 +42,14 @@ const SignInModel = (props: InputProp) => {
             email,
             setEmail: (text: string) => (email.current = text),
             setPassword: (text: string) => (password.current = text),
+            setUserName:(text:string)=>(password.current=text),
             Submit,
+            setIsEnabledBtn,
             isValidEmail,
             isvalidPassword,
             setRender,
-            render
+            render,
+            isEnabledBtn
           }}
             
         

@@ -15,6 +15,7 @@ const Notification2Screen = (props: InputProp) => {
     return (
       <SectionList
         sections={DATA}
+        showsVerticalScrollIndicator={false}
         keyExtractor={(item, index) => item + index}
         renderItem={({item, index}) => (
           <View style={styles.RenItem}>

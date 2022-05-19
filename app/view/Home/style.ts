@@ -176,25 +176,29 @@ flex:1,
     alignItems:"center"
   },
   RendersecondContainer: {
-    backgroundColor: COLORS.lightGray2,
+     backgroundColor: COLORS.lightGray2,
     borderRadius: 12,
     width:Dimensions.get('window').width*0.5,
     padding:10,
+    
   },
   uperRenderView: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
+    
   },
   customtipsBarStyle: {
     flex: 1,
     justifyContent: "space-between",
     flexDirection: 'row',
     marginTop: 5,
+
 },
   caloriesView: {
     flexDirection: 'row',
-   // backgroundColor:"yellow"
+    alignSelf:"center"
+    // backgroundColor:"yellow"
   },
   caloriesIcon: {
     height: 30,
@@ -204,22 +208,22 @@ flex:1,
   caloriesText: {
     fontSize: 12,
     color: COLORS.darkGray,
-    marginTop:7
   },
   RenImageContainer: {
     alignItems: 'center',
-    marginVertical: 5,
+   // marginVertical: 5,
   },
 
   RenderSecondImage: {
     height: 140,
     width: 120,
-    resizeMode:"contain"
+    resizeMode:"contain",
+   // backgroundColor:"red",
 
   },
   price: {
     color: COLORS.black,
-    ...FONTS.h2,
+    ...FONTS.h3,
   },
   itemDescription: {
     color: COLORS.darkGray,
@@ -242,7 +246,8 @@ flex:1,
     marginVertical: 5,
   },
   map:{
-    marginLeft:15
+    marginLeft:5,
+    marginRight:12
   },
   mapContainer:{
     

@@ -50,6 +50,7 @@ const SignUpModel = (props: InputProp) => {
         Submit,
         isValidEmail,
         isvalidPassword,
+        isvalidusername,
         setRender,
         render
       }}

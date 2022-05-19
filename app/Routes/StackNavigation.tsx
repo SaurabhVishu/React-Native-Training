@@ -103,7 +103,7 @@ const StackNavigator = () => {
         <Stack.Screen
           name="Home"
           component={HomeModel}
-         options={{headerShown: false}}
+          options={{headerShown: false}}
         />
         <Stack.Screen
           name="RiderReview"
@@ -126,11 +126,6 @@ const StackNavigator = () => {
           component={ChangePasswordModel}
           options={{headerShown: false}}
         />
-        {/* <Stack.Screen
-          name="HomeScreen"
-          options={{headerShown: false}}
-          component={HomeScreen}
-        /> */}
         <Stack.Screen
           name="Settings"
           options={{headerShown: false}}
@@ -146,17 +141,16 @@ const StackNavigator = () => {
           options={{headerShown: false}}
           component={MyCartViewModel}
         />
-         <Stack.Screen
+        <Stack.Screen
           name="DeliveryStatus"
           options={{headerShown: false}}
           component={DeliveryStatusModel}
         />
-                 <Stack.Screen
+        <Stack.Screen
           name="MapView"
           options={{headerShown: false}}
           component={MapViewModel}
         />
-
 
         <Stack.Screen name="Profile" component={ProfileModel} />
       </Stack.Navigator>

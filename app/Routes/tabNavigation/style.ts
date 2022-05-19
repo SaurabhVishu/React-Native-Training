@@ -1,35 +1,40 @@
+import {StyleSheet} from 'react-native';
+import { FONTS, COLORS } from '../../config/constants';
 
-import { StyleSheet, Dimensions } from "react-native";
-import { COLORS } from "../../config/constants";
+
+
 const styles = StyleSheet.create({
-    maincontainer: { marginRight: 10, marginLeft: 1, justifyContent: "center" },
-    container: {
-        justifyContent: 'center',
-        alignItems: 'center',
+  tabContainer: {
+    backgroundColor: 'white',
+    shadowColor: '#000',
+    shadowOpacity: 0.1,
+    shadowOffset: {
+      width: -10,
+      height: 10,
     },
-    btn: {
-
-        alignItems: 'center',
-
-        borderRadius: 40,
-        marginHorizontal:5
-    },
-    image: {
-        width: 25,
-        height: 25,
-        resizeMode: 'contain',
-        alignSelf: "center"
-    },
-    textstyle: {
-        textAlignVertical: "center",
-        fontSize: 13,
-        color: COLORS.white,
-        
-        marginHorizontal: 3,
-        
-
-    }
-})
-
+    height: 80,
+    borderTopLeftRadius: 30,
+    borderTopRightRadius: 30,
+    paddingHorizontal: 10,
+    paddingVertical: 10,
+  },
+  tabViewContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    padding: 8,
+    borderRadius: 16,
+  },
+  tabButtonContainer: {
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  bottomLabelText: {
+    ...FONTS.body4,
+    color: COLORS.white,
+    paddingHorizontal: 10,
+    fontWeight:"700",
+    fontSize:14
+  },
+});
 
 export default styles;

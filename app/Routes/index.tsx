@@ -1,10 +1,7 @@
-import React from "react";
-import StackNavigator from "./StackNavigation";
+import React from 'react';
+import StackNavigator from './StackNavigation';
 const MainApp = () => {
-    return (
-        <StackNavigator/>
-    )
-}
+  return <StackNavigator />;
+};
 
-export default MainApp
-
+export default MainApp;
