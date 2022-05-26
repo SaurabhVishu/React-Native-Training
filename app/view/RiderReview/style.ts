@@ -69,7 +69,7 @@ const styles=StyleSheet.create({
     tipdata:{
         marginHorizontal:5,
         // backgroundColor:"yellow",
-        padding:15,
+        padding:10,
         borderRadius:12,
         borderColor:COLORS.lightGray1,
         borderWidth:2

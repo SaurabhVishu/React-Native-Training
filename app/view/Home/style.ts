@@ -102,6 +102,7 @@ inactiveTextStyle: {
   DownArrow: {
     height: 20,
     width: 20,
+    marginHorizontal:10
   },
   modalcross: {
     height: 25,

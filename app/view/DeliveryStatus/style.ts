@@ -31,17 +31,17 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   headerContainer: {
-    marginVertical: 5,
+    // marginVertical: 5,
   },
   uperCardContainer: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    padding: 10,
+    padding: 8,
   },
   mainCardView: {
     backgroundColor: COLORS.lightGray2,
     borderRadius: 12,
-    marginVertical:10
+   marginVertical:5
     // padding:10
   },
   seprator: {
@@ -127,7 +127,7 @@ const styles = StyleSheet.create({
     tintColor:COLORS.primary
   },
   mapContainer:{
-      padding:12
+      padding:10
   },
   iconLineContainer:{
       alignItems:"center"

@@ -31,7 +31,7 @@ interface InputProp {
 
 const CheckoutScreen = (props: InputProp) => {
   const {navigation, myCard, text,modalVisible,setModalVisible} = props;
-  const[data,setData]=useState(0)
+  const[data,setData]=useState()
   
   return (
     <View style={styles.mainContainer}>

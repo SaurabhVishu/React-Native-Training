@@ -75,7 +75,7 @@ const MapViewScreen = (props: Inputprop) => {
             })}
             <TouchableOpacity
               style={styles.callBtn}
-              onPress={() => setModalVisible(false)}>
+              onPress={() => {setModalVisible(false),navigation.navigate("RiderReview")}}>
               <View style={styles.btnIconImgContainer}>
                 <Image source={icons.profile} style={styles.profile} />
                 <View style={styles.btnTextContainer}>

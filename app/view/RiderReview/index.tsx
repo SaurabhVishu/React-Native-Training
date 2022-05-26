@@ -61,13 +61,11 @@ const RiderReview = (props: InputProp) => {
       <View style={styles.TipContainer}>
         {dummyData.TipsData.map((item, index) => {
           return (
-            <ScrollView showsHorizontalScrollIndicator={false} key={index}>
             <TouchableOpacity  onPress={()=>setSelected(index)} key={index}>
                 <View style={selected==index?styles.Truetipdata: styles.tipdata}>
               <Text style={ selected==index ? [styles.tiptext,{color:'white'}]:styles.tiptext}>{item.title}</Text>
               </View>
             </TouchableOpacity>
-            </ScrollView>
           );
         })}
       </View>

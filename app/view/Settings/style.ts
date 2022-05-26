@@ -8,8 +8,8 @@ const styles=StyleSheet.create({
         backgroundColor:"white"
     },
     icon:{
-        height:25,
-        width:25,
+        height:20,
+        width:20,
         tintColor:COLORS.primary,
         marginHorizontal:10,
         marginVertical:5

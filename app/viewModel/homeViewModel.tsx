@@ -22,7 +22,7 @@ interface menudata {
 [];
 const HomeModel = (props: InputProp) => {
   const [selected, setSelected] = useState(1);
-  const [Favourite, setFavourite] = useState(false);
+  const [Favourite, setFavourite] = useState(0);
 
   const {navigation} = props;
   let data2 = dummyData.Foodmenu.filter(a => selected == a.categories);

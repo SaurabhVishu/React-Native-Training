@@ -49,20 +49,25 @@ interface secondrenderprops{
     setFavourite:any
      selected:boolean
     Favourite:any
+    item:any
+    index:number
+    navigation:any
 }
 
 export  const RenderSecond = (props:secondrenderprops) => {
     const {data2,  data,
          setFavourite,
         selected,
-        Favourite
+        Favourite,
+        item,
+        index,
+        navigation
     }=props
     return (
-      <FlatList
-        data={data2}
-        horizontal
-        renderItem={({item, index}) => {
-          return (
+            <TouchableOpacity onPress={()=>navigation.navigate("FoodDetail",{
+              item
+
+            })}>
             <View style={styles.RendersecondContainer}>
               <View style={styles.uperRenderView}>
                 <View style={styles.caloriesView}>
@@ -70,7 +75,7 @@ export  const RenderSecond = (props:secondrenderprops) => {
                   <Text style={styles.caloriesText}>{data.calories}</Text>
                 </View>
                 <View>
-                  <TouchableOpacity onPress={() => setFavourite(!false)}>
+                  <TouchableOpacity onPress={() => setFavourite(index)}>
                     <Image
                       source={icons.love}
                       style={
@@ -89,12 +94,8 @@ export  const RenderSecond = (props:secondrenderprops) => {
                 <Text style={styles.price}>${item.price}</Text>
               </View>
             </View>
-          );
-        }}
-        ItemSeparatorComponent={() => {
-          return <View style={styles.itemSep}></View>;
-        }}
-        showsHorizontalScrollIndicator={false}
-      />
+            </TouchableOpacity>
+        
+        
     );
   };

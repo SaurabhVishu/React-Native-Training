@@ -54,7 +54,7 @@ const CustomDrawerContent = (props: any) => {
         </View>
       </View>
 
-      <TouchableOpacity style={style.mapItemView}>
+      <TouchableOpacity style={style.mapItemView} onPress={()=>navigation.navigate("SignUp")}>
         <Image source={icons.logout} style={style.mapIcon} />
 
         <Text style={style.ButtonName}>{constants.Button.logout}</Text>

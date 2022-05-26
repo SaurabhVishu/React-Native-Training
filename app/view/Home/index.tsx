@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import {
   View,
   Text,
@@ -237,16 +237,39 @@ const Home = (props: InputProp) => {
           <View style={styles.searchcontainer}>
             <View style={styles.mainsmallcontainer}>
               <View style={styles.smallcontainer}>
-                <Text style={FONTS.h3}>Search item is :   {searchText}</Text>
+                <Text style={FONTS.h3}>Search item is : {searchText}</Text>
               </View>
               {SearchData.length != 0 ? (
-                <RenderSecond
-                  data2={SearchData}
-                  data={data}
-                   setFavourite={setFavourite}
-                   selected={selected}
-                  Favourite={Favourite}
-                />
+                // <RenderSecond
+                //   data2={SearchData}
+                //   data={data}
+                //   setFavourite={setFavourite}
+                //   selected={selected}
+                //   Favourite={Favourite}
+                // />
+                <FlatList
+                data={SearchData}
+                horizontal
+                renderItem={({item, index}) => {
+                  return (
+                    <RenderSecond
+                     {...{ data2,
+                      data,
+                      setFavourite,
+                      selected,
+                      Favourite,
+                      item,
+                      index,
+                      navigation
+                    }}
+                    />
+                  );
+                }}
+                ItemSeparatorComponent={() => {
+                  return <View style={styles.itemSep}></View>;
+                }}
+                showsHorizontalScrollIndicator={false}
+              />
               ) : (
                 <Text style={FONTS.h3}> Searched Item Is Not Found </Text>
               )}
@@ -271,12 +294,28 @@ const Home = (props: InputProp) => {
               <Text style={styles.Deliveryto}>{data.ShowAll}</Text>
             </View>
             <View>
-              <RenderSecond
-                data2={data2}
-                data={data}
-                setFavourite={setFavourite}
-                selected={selected}
-                Favourite={Favourite}
+              <FlatList
+                data={data2}
+                horizontal
+                renderItem={({item, index}) => {
+                  return (
+                    <RenderSecond
+                     {...{ data2,
+                      data,
+                      setFavourite,
+                      selected,
+                      Favourite,
+                      item,
+                      index,
+                      navigation
+                    }}
+                    />
+                  );
+                }}
+                ItemSeparatorComponent={() => {
+                  return <View style={styles.itemSep}></View>;
+                }}
+                showsHorizontalScrollIndicator={false}
               />
             </View>
             <View style={styles.RecommendedContainer}>
@@ -298,7 +337,7 @@ const Home = (props: InputProp) => {
                           />
                         </View>
                         <View>
-                          <TouchableOpacity onPress={() => setFavourite(true)}>
+                          <TouchableOpacity onPress={() => setFavourite(index)}>
                             <Image
                               source={icons.love}
                               style={

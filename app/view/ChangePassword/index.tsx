@@ -18,6 +18,8 @@ const ChangePassword = (props: InputProp) => {
           name={constants.screens.ChangePassword}
           leftIcon={icons.back}
           rytIcon={undefined}
+          leftNavigation={()=>navigation.goBack()} 
+
         />
         <View style={styles.mapContainer}>
           {dummyData.ChangePassword.map((item, index) => {
@@ -26,7 +28,7 @@ const ChangePassword = (props: InputProp) => {
                 <Text style={styles.label}>{item.label}</Text>
                 <View style={styles.textinputView}>
                   <TextInput />
-                  <Image source={icons.eye} style={styles.eye} />
+                  <Image source={icons.eye_close} style={styles.eye} />
                 </View>
               </View>
             );

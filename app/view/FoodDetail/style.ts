@@ -6,6 +6,7 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: "white",
         padding: 15,
+        //backgroundColor:"red"
     },
     ViewCard: {
         backgroundColor: "red",
@@ -20,7 +21,7 @@ const styles = StyleSheet.create({
     Topcard: {
         flexDirection: "row",
         justifyContent: "space-between",
-        padding: 5,
+       // padding: 5,
     },
     calories: {
         height: 35,
@@ -29,15 +30,19 @@ const styles = StyleSheet.create({
     favourite: {
         height: 25,
         width: 25,
+        tintColor:"red",
+        marginHorizontal:10,
+        marginTop:10
     },
     text: {
         color: COLORS.darkGray,
         ...FONTS.body4
     },
     hamburger: {
-        height: "95%",
-        width: "65%",
+        height: "85%",
+        width: "55%",
         resizeMode: "contain",
+        //marginTop:10
     },
     bugerContainer: {
         justifyContent: "center",
@@ -45,9 +50,10 @@ const styles = StyleSheet.create({
     },
     upeerLeft: {
         flexDirection: "row",
+        marginTop:8
     },
     title: {
-        ...FONTS.h1,
+        ...FONTS.h2,
         color: COLORS.black,
         marginVertical: 10,
 
@@ -70,8 +76,9 @@ const styles = StyleSheet.create({
 
     },
     star: {
-        height: 25,
-        width: 25,
+        height: 20,
+        width: 20,
+        resizeMode:"contain"
     },
     startxt: {
         ...FONTS.h3,
@@ -110,13 +117,13 @@ const styles = StyleSheet.create({
 
     },
     renderText:{
-        ...FONTS.body1,
+        ...FONTS.body2,
         // textAlignVertical:"center"
         // marginVertical:10,
         // color:COLORS.white
     },
     renderTextoff:{
-         ...FONTS.body1,
+         ...FONTS.body2,
         color:COLORS.lightGray1
     },
     toggle: {
@@ -143,8 +150,8 @@ const styles = StyleSheet.create({
         flexDirection:"row",
     },
     profile:{
-        height:55,
-        width:55,
+        height:40,
+        width:43,
         borderRadius:SIZES.radius,
          marginVertical:5,
     },
@@ -154,32 +161,32 @@ const styles = StyleSheet.create({
     profileCon:{
         flexDirection:"row",
     },
-    starSize:{height:25,
-        width:25,
+    starSize:{height:20,
+        width:20,
         tintColor:"orange"
     },
     addbtn:{
-        padding:5,
+        padding:10,
         flexDirection:"row",
         backgroundColor:COLORS.lightGray2,
-        justifyContent:"space-between",
+        justifyContent:"space-around",
         // backgroundColor:"red",
-        height:"90%",
+        height:"100%",
         alignItems:'center',
-        width:"35%",
+        width:"40%",
         borderRadius:SIZES.radius
 
     },
     one:{
-        ...FONTS.h1,
+        ...FONTS.h2,
         color:"black",
     },
     pricebtn:{
-        padding:5,
+        padding:15,
         flexDirection:"row",
         backgroundColor:COLORS.primary,
-        height:"90%",
-        width:"60%",
+        // height:"100%",
+        // width:"50%",
         borderRadius:SIZES.radius,
         justifyContent:"space-between",
         alignItems:"center"
@@ -187,8 +194,9 @@ const styles = StyleSheet.create({
     },
     btmBtnCont:{
         flexDirection:"row",
-    height:"10%",
-    justifyContent:"space-between"
+    //height:"10%",
+    justifyContent:"space-between",
+    alignItems:"center"
 },
 headerText:{
     ...FONTS.h2,
@@ -210,9 +218,14 @@ headerIconCont:{
 headerIcon:{
     height: 25,
     width: 25,
+    //position:"absolute"
 },
 
-
+cartIcon:{
+    height: "100%",
+    width: "100%",
+   // position:"absolute"
+},
 
 
 

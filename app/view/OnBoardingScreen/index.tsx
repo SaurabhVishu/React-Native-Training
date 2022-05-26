@@ -21,10 +21,10 @@ interface RenderItemProp {
 
 const RenderItem = (props: RenderItemProp) => {
     const { item, index ,navigation,FlatlistRef} = props;
-    const[touch,setTouch]=useState(false)
-    console.log("index is",index);
+
    
     const scrollToIndex = (id:number) => {
+      //id=0
       FlatlistRef.current.scrollToIndex({animated: true, index:id});
     }
     

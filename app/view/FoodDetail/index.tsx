@@ -1,6 +1,6 @@
 import React from 'react';
 import {View, Text, Dimensions, Image, FlatList} from 'react-native';
-import {TouchableOpacity} from 'react-native-gesture-handler';
+import {ScrollView, TouchableOpacity} from 'react-native-gesture-handler';
 import {constants, dummyData, icons, images} from '../../config/constants';
 import styles from './style';
 import {SIZES, COLORS} from '../../config/constants/theme';
@@ -10,10 +10,13 @@ interface InputProp {
   data: any;
   setSelected: any;
   selected: any;
+  item:any;
+  value:number,
+  setValue:any
 }
 
 const FoodDetail = (props: InputProp) => {
-  const {navigation, data, selected, setSelected} = props;
+  const {navigation, data, selected, setSelected,item,value,setValue} = props;
   const RenderSizes = () => {
     return (
       <FlatList
@@ -44,8 +47,12 @@ const FoodDetail = (props: InputProp) => {
   return (
     <View style={styles.container}>
       {/* Header section */}
-      <View style={styles.headerContainer}>
-        <TouchableOpacity style={styles.headerIconCont}>
+      <View style={styles.headerContainer}
+      >
+        <TouchableOpacity style={styles.headerIconCont}
+                onPress={()=>navigation.goBack()} 
+
+        >
           <Image source={icons.back} style={styles.headerIcon} />
         </TouchableOpacity>
         <Text style={styles.headerText}>{constants.screens.deatil}</Text>
@@ -53,7 +60,7 @@ const FoodDetail = (props: InputProp) => {
           <Image source={icons.cart} style={styles.headerIcon} />
         </TouchableOpacity>
       </View>
-
+    <ScrollView showsVerticalScrollIndicator={false}>
       <View style={styles.styleHeader}>
         <View style={styles.Topcard}>
           <View style={styles.upeerLeft}>
@@ -61,15 +68,15 @@ const FoodDetail = (props: InputProp) => {
             <Text style={styles.text}>{data.t1}</Text>
           </View>
           <TouchableOpacity>
-            <Image source={icons.favourite} style={styles.favourite} />
+            <Image source={icons.love} style={styles.favourite} />
           </TouchableOpacity>
         </View>
         <View style={styles.bugerContainer}>
-          <Image source={dummyData.hamburger.image} style={styles.hamburger} />
+          <Image source={item.image} style={styles.hamburger} />
         </View>
       </View>
 
-      <Text style={styles.title}>{data.title}</Text>
+      <Text style={styles.title}>{item.name}</Text>
       <Text style={styles.description}>{data.description}</Text>
 
       <View style={styles.DeatailCont}>
@@ -108,20 +115,26 @@ const FoodDetail = (props: InputProp) => {
 
       <View style={styles.btmBtnCont}>
         <View style={styles.addbtn}>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={()=>setValue(value>0 ? value-1:0)}>
             <Image source={icons.minus} style={styles.star} />
           </TouchableOpacity>
-          <Text style={styles.one}>1</Text>
-          <TouchableOpacity>
+          <Text style={styles.one}>{value}</Text>
+          <TouchableOpacity onPress={()=>setValue(value+1)}>
             <Image source={icons.plus} style={styles.star} />
           </TouchableOpacity>
         </View>
-        <View style={styles.pricebtn}>
+        <TouchableOpacity style={styles.pricebtn}
+        onPress={()=>navigation.navigate("Checkout")}
+      >
           <Text style={styles.startxt}>{constants.Button.buynow}</Text>
-          <Text style={styles.startxt}>{data.price}</Text>
-        </View>
+          <Text style={styles.startxt}>$ {value*10.99}</Text>
+        </TouchableOpacity>
+       
       </View>
+      <Text></Text>
+      </ScrollView>
     </View>
+    
   );
 };
 

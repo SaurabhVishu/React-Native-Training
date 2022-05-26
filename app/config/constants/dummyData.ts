@@ -637,7 +637,7 @@ const DrawerButton = [
   {
     title: 'Favourite',
     icon: icons.favourite,
-    routeName: 'Home',
+    routeName: 'Drawer',
   },
   {
     title: 'Track Your Order',
@@ -657,12 +657,12 @@ const DrawerButton = [
   {
     title: 'invite a Friend',
     icon: icons.star,
-    routeName: 'Home',
+    routeName: 'Drawer',
   },
   {
     title: 'Help Center',
     icon: icons.help,
-    routeName: 'Home',
+    routeName: 'Drawer',
   },
 ];
 
@@ -1024,51 +1024,61 @@ const Settings = [
     id: 1,
     title: 'Change Password',
     icon: icons.clock,
+    routeName:"ChangePassword",
   },
   {
     id: 2,
     title: 'Preferences',
     icon: icons.filter,
+    routeName:"Settings"
   },
   {
     id: 3,
     title: 'Notification',
     icon: icons.notification,
+    routeName:"Notification"
   },
   {
     id: 4,
     title: 'Data use',
     icon: icons.map,
+    routeName:"Settings"
   },
   {
     id: 5,
     title: 'Language',
     icon: icons.globe,
+    routeName:"Settings"
   },
   {
     id: 6,
     title: 'Check Updates',
     icon: icons.help,
+    routeName:"Settings"
   },
   {
     id: 7,
     title: 'Contact Us',
     icon: icons.call,
+    routeName:"Settings"
   },
   {
     id: 8,
     title: 'Privacy Policy',
     icon: icons.location,
+    routeName:"Settings"
   },
   {
     id: 9,
     title: 'Terms & Conditions',
     icon: icons.clock,
+    routeName:"Settings"
   },
   {
     id: 10,
     title: 'Logout',
     icon: icons.logout,
+    routeName:"SignUp"
   },
 ];
 

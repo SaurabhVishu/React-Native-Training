@@ -3,6 +3,7 @@ import {View, Text, SafeAreaView, Image, TouchableOpacity} from 'react-native';
 import {constants, icons} from '../../config/constants';
 import styles from './style';
 import {MainButton} from '../../Common';
+import { ScrollView } from 'react-native-gesture-handler';
 
 interface Inputprop {
   navigation: any;
@@ -37,7 +38,7 @@ const DeliveryStatus = (props: Inputprop) => {
 
           <Text style={styles.heading}>{ScreenText.Estimated}</Text>
           <Text style={styles.date}>{ScreenText.Date}</Text>
-
+            
           <View style={styles.mainCardView}>
             <View style={styles.uperCardContainer}>
               <Text style={styles.trackOrder}>{ScreenText.Trackorder}</Text>
@@ -79,6 +80,7 @@ const DeliveryStatus = (props: Inputprop) => {
             </View>
           </View>
         </View>
+        
         {id <= 4 ? (
           <View style={styles.btnContainer}>
             <TouchableOpacity
@@ -128,6 +130,8 @@ const DeliveryStatus = (props: Inputprop) => {
           />
         )}
       </View>
+
+
     </SafeAreaView>
   );
 };

@@ -10,6 +10,7 @@ interface Inputprop {
     id: number;
     title: string;
     icon: any;
+    routeName:string;
 }[],
 }
 
@@ -27,7 +28,9 @@ const SettingsScreen = (props: Inputprop) => {
             {data.map((item,index)=>{
                 return(
                     <View key={index} >
-                        <TouchableOpacity  style={index==9?styles.Btn:[styles.Btn,styles.border]}>
+                        <TouchableOpacity 
+                        onPress={()=>navigation.navigate(item.routeName)}
+                        style={index==9?styles.Btn:[styles.Btn,styles.border]}>
                         <Image source={item.icon} style={styles.icon}/>
                         <Text style={styles.title}>{item.title}</Text>
                         </TouchableOpacity>
