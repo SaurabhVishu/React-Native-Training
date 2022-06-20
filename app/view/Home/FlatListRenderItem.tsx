@@ -46,23 +46,26 @@ export const RenderFirst = (props:reanderfirst) => {
 interface secondrenderprops{
     data2:any
     data:any
-    setFavourite:any
-     selected:boolean
-    Favourite:any
+    //setFavourite:any
+    // selected:boolean
+    //Favourite:any
     item:any
     index:number
     navigation:any
+    likebuttonClickHandler: (index: number) => void;
 }
 
 export  const RenderSecond = (props:secondrenderprops) => {
     const {data2,  data,
-         setFavourite,
-        selected,
-        Favourite,
+         //setFavourite,
+       // selected,
+       // Favourite,
         item,
         index,
-        navigation
+        navigation,
+        likebuttonClickHandler
     }=props
+    
     return (
             <TouchableOpacity onPress={()=>navigation.navigate("FoodDetail",{
               item
@@ -75,11 +78,11 @@ export  const RenderSecond = (props:secondrenderprops) => {
                   <Text style={styles.caloriesText}>{data.calories}</Text>
                 </View>
                 <View>
-                  <TouchableOpacity onPress={() => setFavourite(index)}>
+                  <TouchableOpacity onPress={() => likebuttonClickHandler(index)}>
                     <Image
                       source={icons.love}
                       style={
-                        selected == Favourite
+                        item.isFavourite
                           ? styles.TrueLove
                           : styles.Favourite
                       }

@@ -9,6 +9,7 @@ const styles=StyleSheet.create({
         borderRadius: 10,
         paddingVertical: 15,
         alignItems: "center",
+        marginHorizontal:10
     },
     signinTxt: {
         color: "white",

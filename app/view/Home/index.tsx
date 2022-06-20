@@ -58,17 +58,23 @@ interface InputProp {
     time: string;
   }[];
   SearchData: any;
+  ResetSearch: any;
+  Resetfilter: any;
+  likebuttonClickHandler: (index: number) => void;
 }
 
 const Home = (props: InputProp) => {
   const {
     navigation,
+    likebuttonClickHandler,
     data,
+    ResetSearch,
     selected,
     setSelected,
     data2,
-    Favourite,
-    setFavourite,
+    Resetfilter,
+    // Favourite,
+    // setFavourite,
     modalVisible,
     setModalVisible,
     setdistance,
@@ -144,15 +150,15 @@ const Home = (props: InputProp) => {
   const filterdataDisplay = () => {
     return (
       <View>
-        <Text
-          style={{
-            fontSize: 18,
-            fontWeight: 'bold',
-            color: 'black',
-            marginTop: 10,
-          }}>
-          Filterd item
-        </Text>
+        <View style={styles.filterItemContainer}>
+          <Text style={styles.filterItem}>Filterd item</Text>
+          <TouchableOpacity
+            onPress={() => {
+              setfilterdata(false), Resetfilter();
+            }}>
+            <Text style={styles.cancelFilter}>Cancel</Text>
+          </TouchableOpacity>
+        </View>
 
         <ScrollView showsHorizontalScrollIndicator={false} horizontal>
           <View style={styles.mapContainer}>
@@ -169,11 +175,14 @@ const Home = (props: InputProp) => {
                       />
                     </View>
                     <View>
-                      <TouchableOpacity onPress={() => setFavourite(true)}>
+                      <TouchableOpacity
+                        onPress={() => {
+                          likebuttonClickHandler(index);
+                        }}>
                         <Image
                           source={icons.love}
                           style={
-                            selected == Favourite
+                            item.isFavourite
                               ? styles.TrueLove
                               : styles.Favourite
                           }
@@ -220,17 +229,27 @@ const Home = (props: InputProp) => {
                 }}>
                 <Image source={icons.search} style={styles.searchIcon} />
               </TouchableOpacity>
+
               <TextInput
                 placeholder="Search Food.."
+                defaultValue={searchText}
                 onChangeText={text => setSearchText(text)}
               />
             </View>
-            <TouchableOpacity
-              onPress={() => {
-                setModalVisible(true);
-              }}>
-              <Image source={icons.filter} style={styles.filterIcon} />
-            </TouchableOpacity>
+
+            {searchText.length > 0 && (
+              <TouchableOpacity onPress={() => ResetSearch()}>
+                <Image source={icons.cancel} style={styles.cancel} />
+              </TouchableOpacity>
+            )}
+            {searchText.length <= 0 && (
+              <TouchableOpacity
+                onPress={() => {
+                  setModalVisible(true);
+                }}>
+                <Image source={icons.filter} style={styles.filterIcon} />
+              </TouchableOpacity>
+            )}
           </View>
         </View>
         {searchText != '' && (
@@ -240,36 +259,41 @@ const Home = (props: InputProp) => {
                 <Text style={FONTS.h3}>Search item is : {searchText}</Text>
               </View>
               {SearchData.length != 0 ? (
-                // <RenderSecond
-                //   data2={SearchData}
-                //   data={data}
-                //   setFavourite={setFavourite}
-                //   selected={selected}
-                //   Favourite={Favourite}
-                // />
-                <FlatList
-                data={SearchData}
-                horizontal
-                renderItem={({item, index}) => {
-                  return (
-                    <RenderSecond
-                     {...{ data2,
-                      data,
-                      setFavourite,
-                      selected,
-                      Favourite,
-                      item,
-                      index,
-                      navigation
+                <>
+                  <RenderSecond
+                    data2={SearchData}
+                    data={data}
+                    likebuttonClickHandler={likebuttonClickHandler}
+                    item={undefined}
+                    index={0}
+                    navigation={undefined} //setFavourite={setFavourite}
+                  />
+                  <FlatList
+                    data={SearchData}
+                    horizontal
+                    renderItem={({item, index}) => {
+                      return (
+                        <RenderSecond
+                          {...{
+                            data2,
+                            data,
+                            // setFavourite,
+                            // selected,
+                            // Favourite,
+                            item,
+                            index,
+                            navigation,
+                            likebuttonClickHandler,
+                          }}
+                        />
+                      );
                     }}
-                    />
-                  );
-                }}
-                ItemSeparatorComponent={() => {
-                  return <View style={styles.itemSep}></View>;
-                }}
-                showsHorizontalScrollIndicator={false}
-              />
+                    ItemSeparatorComponent={() => {
+                      return <View style={styles.itemSep}></View>;
+                    }}
+                    showsHorizontalScrollIndicator={false}
+                  />
+                </>
               ) : (
                 <Text style={FONTS.h3}> Searched Item Is Not Found </Text>
               )}
@@ -300,15 +324,17 @@ const Home = (props: InputProp) => {
                 renderItem={({item, index}) => {
                   return (
                     <RenderSecond
-                     {...{ data2,
-                      data,
-                      setFavourite,
-                      selected,
-                      Favourite,
-                      item,
-                      index,
-                      navigation
-                    }}
+                      {...{
+                        data2,
+                        data,
+                        // setFavourite,
+                        // selected,
+                        // Favourite,
+                        item,
+                        index,
+                        navigation,
+                        likebuttonClickHandler,
+                      }}
                     />
                   );
                 }}
@@ -324,7 +350,7 @@ const Home = (props: InputProp) => {
             </View>
             <ScrollView showsHorizontalScrollIndicator={false} horizontal>
               <View style={styles.mapContainer}>
-                {dummyData.Foodmenu.map((item, index) => {
+                {menudata.map((item, index) => {
                   return (
                     <View
                       style={[styles.RendersecondContainer, styles.map]}
@@ -337,11 +363,12 @@ const Home = (props: InputProp) => {
                           />
                         </View>
                         <View>
-                          <TouchableOpacity onPress={() => setFavourite(index)}>
+                          <TouchableOpacity
+                            onPress={() => likebuttonClickHandler(index)}>
                             <Image
                               source={icons.love}
                               style={
-                                selected == Favourite
+                                item.isFavourite
                                   ? styles.TrueLove
                                   : styles.Favourite
                               }
@@ -384,7 +411,9 @@ const Home = (props: InputProp) => {
             <View style={styles.modalTextcontainer}>
               <Text style={styles.ModalSubText}>Filter Your Search</Text>
               <TouchableOpacity
-                onPress={() => setModalVisible(false)}
+                onPress={() => {
+                  setModalVisible(false), Resetfilter();
+                }}
                 style={styles.crossimageconatainer}>
                 <Image source={icons.cross} style={styles.modalcross} />
               </TouchableOpacity>

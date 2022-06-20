@@ -11,6 +11,18 @@ const styles = StyleSheet.create({
     ViewCard: {
         backgroundColor: "red",
     },
+    countContainer:{
+        backgroundColor: 'orange',
+              borderRadius: 5,
+              paddingHorizontal: 3,
+              marginLeft: 5,
+              bottom:5
+    },
+    count:{
+        fontSize:14,
+        color:COLORS.white
+        
+    },
     styleHeader: {
         // flex:0.2,
         backgroundColor: COLORS.lightGray2,
@@ -211,8 +223,19 @@ headerIconCont:{
     backgroundColor:COLORS.white,
     padding:5,
     borderRadius:10,
-    borderWidth:1,
+    borderWidth:2,
+    //spaddingHorizontal:10,
     borderColor:COLORS.lightGray2
+    
+    
+},
+cartIconContainer:{
+    backgroundColor:COLORS.white,
+    padding:5,
+    borderRadius:10,
+    //borderWidth:2,
+    paddingHorizontal:10,
+    borderColor:COLORS.lightGray2,
     
 },
 headerIcon:{
@@ -222,9 +245,10 @@ headerIcon:{
 },
 
 cartIcon:{
-    height: "100%",
-    width: "100%",
-   // position:"absolute"
+    height: 25,
+    width: 25,
+    position:"absolute",
+    //resizeMode:"stretch"
 },
 
 

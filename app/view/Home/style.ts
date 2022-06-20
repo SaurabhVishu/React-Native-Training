@@ -16,6 +16,31 @@ const styles = StyleSheet.create({
 searchcontainer:{
   marginBottom:20
 },
+filterItemContainer:{
+  flexDirection:"row",
+  justifyContent:"space-between",
+  marginVertical:10
+},
+filterItem:{
+  fontSize: 18,
+  fontWeight: 'bold',
+  color: 'black',
+  marginTop: 10,
+},
+cancelFilter:{
+  fontSize: 18,
+            fontWeight: 'bold',
+            color: 'red',
+            marginTop: 10,
+
+},
+cancel:{
+  height:20,
+  width:20,
+  resizeMode:"contain",
+  tintColor:"black"
+  //marginRight:5,
+},
 starIcon:{
   height:25,
   width:25,

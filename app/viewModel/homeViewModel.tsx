@@ -22,7 +22,7 @@ interface menudata {
 [];
 const HomeModel = (props: InputProp) => {
   const [selected, setSelected] = useState(1);
-  const [Favourite, setFavourite] = useState(0);
+  //const [Favourite, setFavourite] = useState(!true);
 
   const {navigation} = props;
   let data2 = dummyData.Foodmenu.filter(a => selected == a.categories);
@@ -38,9 +38,19 @@ const HomeModel = (props: InputProp) => {
   const [searchText, setSearchText] = useState('');
   const [filterdata, setfilterdata] = useState(false);
   const [isSearch,setisSearch]=useState(false)
+  const [render,setRender]=useState(false)
 
 
   let menudata = dummyData.Foodmenu;
+console.log(data2[0])
+
+const likeButtonClick=(index:number)=>{
+  menudata[index].isFavourite = !menudata[index].isFavourite
+  data2[index].isFavourite = !menudata[index].isFavourite
+
+  setRender(!render)
+
+}
 
 
   const SearchData = dummyData.Foodmenu.filter((data: menudata) =>
@@ -64,49 +74,63 @@ const HomeModel = (props: InputProp) => {
     );
   }
 
+
+
+
+
   const Resetfilter = () => {
     setDefaultRating(0);
     setDefaulttime('');
     setdistance([]);
     setprice([]);
+    setfilterdata(false)
   };
-  type DefaultRootStat = {
-    profile: string;
-  };
+  
+
+
+  const ResetSearch=()=>{
+    setSearchText("");
+  }
+
+  
   // console.log("data is ====>time,rate,price",defaulttime,"  ",defaultRating,"  ",price);
   // console.log("New array return is ========>",menudata)
 
   return (
     <Home
-      {...{
-        navigation,
-        data: dummyData.ScreenData.HomeScreen,
-        selected,
-        setSelected,
-        data2,
-        Favourite,
-        setFavourite,
-        modalVisible,
-        setModalVisible,
-        setdistance,
-        setprice,
-        maxtime,
-        setMaxtime,
-        defaulttime,
-        setDefaulttime,
-        rating,
-        setDefaultRating,
-        defaultRating,
-        searchText,
-        setSearchText,
-        filterdata,
-        setfilterdata,
-        menudata,
-        isSearch,
-        setisSearch,
-        SearchData
-      }}
-    />
+    Favourite={undefined} setFavourite={undefined} {...{
+      navigation,
+      data: dummyData.ScreenData.HomeScreen,
+      selected,
+      setSelected,
+      data2,
+      Resetfilter,
+      // Favourite,
+      // setFavourite,
+      // isFavorite,
+      // setIsFavourite,
+      modalVisible,
+      setModalVisible,
+      setdistance,
+      setprice,
+      maxtime,
+      setMaxtime,
+      defaulttime,
+      setDefaulttime,
+      rating,
+      setDefaultRating,
+      defaultRating,
+      searchText,
+      setSearchText,
+      filterdata,
+      setfilterdata,
+      menudata,
+      isSearch,
+      setisSearch,
+      SearchData,
+      ResetSearch,
+      likebuttonClickHandler: (index: number) => likeButtonClick(index)
+    }}    />
   );
 };
 

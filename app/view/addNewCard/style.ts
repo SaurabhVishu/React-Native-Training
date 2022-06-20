@@ -50,6 +50,7 @@ const styles = StyleSheet.create({
   CardNumText: {
     ...FONTS.body4,
     color: COLORS.white,
+    marginHorizontal:10
   },
   textInputContainer: {
     backgroundColor: COLORS.lightGray2,

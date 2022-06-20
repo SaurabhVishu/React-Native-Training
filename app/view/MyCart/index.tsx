@@ -95,7 +95,7 @@ const MyCart = (props: Inputprop) => {
         rytIcon={icons.cart}
         leftNavigation={() => navigation.goBack()}
       />
-      <ScrollView>
+      <ScrollView   showsVerticalScrollIndicator={false}>
         <View style={styles.UpperView}>
           {data.map((item: any, index: number) => {
             return (
@@ -139,6 +139,8 @@ const MyCart = (props: Inputprop) => {
             );
           })}
         </View>
+        </ScrollView>
+
         <TouchableOpacity style={styles.Button} onPress={()=>setModalVisible(!modalVisible)} >
             <Text style={styles.btnTxt}>{constants.Button.continue}</Text>
           </TouchableOpacity>
@@ -193,7 +195,6 @@ const MyCart = (props: Inputprop) => {
           </View>
           <MainButton name={constants.Button.placeYourOrder} />
         </View> */}
-      </ScrollView>
     </SafeAreaView>
   );
 };

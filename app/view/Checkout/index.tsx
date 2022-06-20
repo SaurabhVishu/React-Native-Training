@@ -31,7 +31,7 @@ interface InputProp {
 
 const CheckoutScreen = (props: InputProp) => {
   const {navigation, myCard, text,modalVisible,setModalVisible} = props;
-  const[data,setData]=useState()
+  const[data,setData]=useState(0)
   
   return (
     <View style={styles.mainContainer}>
@@ -43,7 +43,7 @@ const CheckoutScreen = (props: InputProp) => {
 
       />
 
-      {myCard.map((item, index) => {
+      {myCard.map((item, index:number) => {
         return (
           <TouchableOpacity onPress={() => {setModalVisible(true),setData(index)}} key={index} >
             <View style={index==data?[styles.CardViewContainer,{borderColor:COLORS.primary}]:styles.CardViewContainer}>

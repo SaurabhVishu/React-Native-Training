@@ -105,7 +105,7 @@ const DeliveryStatus = (props: Inputprop) => {
                   ? styles.btn
                   : styles.unSelectBtn
               }
-              onPress={() => setTouch(true)}>
+              onPress={() => {setTouch(true),navigation.navigate("MapView")}}>
               <Image
                 source={icons.map}
                 style={

@@ -92,7 +92,7 @@ const Foodmenu = [
     description: 'Mexican tortilla & tacos',
     price: 10.99,
     calories: 78,
-    isFavourite: false,
+    isFavourite: true,
     image: require('../../assets/dummyData/hot_tacos.png'),
     categories: 1,
     distance: 8,

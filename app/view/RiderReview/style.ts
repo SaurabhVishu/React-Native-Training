@@ -63,6 +63,7 @@ const styles=StyleSheet.create({
     },
     TipContainer:{
         flexDirection:"row",
+        justifyContent:"space-around"
         
 
     },

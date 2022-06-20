@@ -28,7 +28,7 @@ const Roottab = () => {
         tabBarStyle: {
           height: 70,
           paddingHorizontal: 10,
-          backgroundColor: COLORS.white2,
+          backgroundColor: COLORS.white,
         },
       }}>
       <Tab.Screen

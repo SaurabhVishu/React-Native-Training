@@ -69,6 +69,7 @@ const styles = StyleSheet.create({
     width: 20,
     resizeMode: 'contain',
     tintColor:COLORS.gray,
+    marginRight:8
   },
   signuInButton: {
     fontSize: 20,

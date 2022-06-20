@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
         padding:15,
         width:"45%",
         flexDirection:"row",
-        justifyContent:"center",
+        //justifyContent:"center",
         backgroundColor:COLORS.white
       },
       unselectBtnName:{

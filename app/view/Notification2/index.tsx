@@ -40,10 +40,10 @@ const Notification2Screen = (props: InputProp) => {
     <View style={styles.container}>
       <Header
         name={constants.screens.notifi}
-        leftIcon={icons.back}
+        leftIcon={icons.menu}
         rytIcon={icons.profile}
-        leftNavigation={()=>navigation.goBack()} 
-      />
+        leftNavigation={() => navigation.openDrawer()}
+        />
 
       <RenderItem />
     </View>
